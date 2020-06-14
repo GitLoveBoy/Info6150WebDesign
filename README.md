@@ -9,4 +9,5 @@
 - AWS EventBridge
 
 ## Deployment
-### Prereq
+### Prerequisites
+1. [Install AWS CLI](https://docs.aws.amazon.com/cli/late
