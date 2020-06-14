@@ -5,4 +5,8 @@
 
 ## Stacks
 - AWS Lambda
-- AWS A
+- AWS API Gateway
+- AWS EventBridge
+
+## Deployment
+### Prereq
