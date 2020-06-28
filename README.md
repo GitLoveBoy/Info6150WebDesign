@@ -11,4 +11,5 @@
 ## Deployment
 ### Prerequisites
 1. [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-prereqs.html)
-2. [Configuring the AWS CLI](https://docs.aws.amazon.com/c
+2. [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
+3. [I
