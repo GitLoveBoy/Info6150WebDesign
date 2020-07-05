@@ -16,4 +16,9 @@
 
 ### Install dependencies
 ```bash
-cd 
+cd ./functions/api
+cp config.yml.example config.yml
+yarn
+```
+
+### 
