@@ -21,4 +21,7 @@ cp config.yml.example config.yml
 yarn
 ```
 
-### 
+### Deploy services
+```bash
+cd ./terraform/api
+terraform ini
