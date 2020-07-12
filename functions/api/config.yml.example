@@ -26,3 +26,18 @@ socials:
     access_token_secret: ""
   telegram:
     api: "https://api.telegram.org"
+    key: ""
+    channel: ""
+
+alerts:
+  gas_gwei_threshold: 10
+  fear_and_greed_threshold:
+    high: 75
+    low: 20
+  analytics:
+    ath_change_threshold: -90
+    candle_threshold: 0.1
+    doji_threshold: 0.01
+    hammer_threshold: 0.2
+    ma_threshold: 0.03
+    min_candle_change_percentage: 0.1
