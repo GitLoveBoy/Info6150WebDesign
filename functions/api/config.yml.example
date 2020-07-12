@@ -1,0 +1,28 @@
+
+##########################
+# Services Configuration #
+##########################
+
+website: "https://coinhippo.io"
+
+api:
+  endpoints:
+    coinhippo: "https://api.coinhippo.io"
+    coingecko: "https://api.coingecko.com/api/v3/"
+    ens: "https://api.thegraph.com/subgraphs/name/ensdomains/ens"
+    fear_and_greed: "https://api.alternative.me/"
+    news:
+      api: "https://cryptopanic.com/api/v1/"
+      key: ""
+    whale_alert:
+      api: "https://api.whale-alert.io/v1/"
+      key: ""
+
+socials:
+  twitter:
+    api_key: ""
+    api_secret: ""
+    access_token: ""
+    access_token_secret: ""
+  telegram:
+    api: "https://api.telegram.org"

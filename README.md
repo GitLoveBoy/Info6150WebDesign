@@ -24,4 +24,6 @@ yarn
 ### Deploy services
 ```bash
 cd ./terraform/api
-terraform ini
+terraform init
+terraform apply
+```
