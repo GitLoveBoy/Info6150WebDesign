@@ -4,4 +4,6 @@ module.exports = {
       {
         id: 'ethereum',
         chain_id: 1,
-        
+        name: 'Ethereum',
+        short_name: 'ETH',
+        p
