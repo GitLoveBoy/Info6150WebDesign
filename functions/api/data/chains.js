@@ -8,4 +8,6 @@ module.exports = {
         short_name: 'ETH',
         provider_params: [
           {
-            chainId: '0x1'
+            chainId: '0x1',
+            chainName: 'Ethereum',
+            rpcUrls: ['https://mainnet
