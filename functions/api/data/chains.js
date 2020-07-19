@@ -6,4 +6,6 @@ module.exports = {
         chain_id: 1,
         name: 'Ethereum',
         short_name: 'ETH',
-        p
+        provider_params: [
+          {
+            chainId: '0x1'
