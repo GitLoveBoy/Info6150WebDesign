@@ -12,4 +12,6 @@ module.exports = {
             chainName: 'Ethereum',
             rpcUrls: ['https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161', 'https://rpc.ankr.com/eth'],
             nativeCurrency: {
-              na
+              name: 'Ether',
+              symbol: 'ETH',
+              deci
