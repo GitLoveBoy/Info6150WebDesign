@@ -14,4 +14,6 @@ module.exports = {
             nativeCurrency: {
               name: 'Ether',
               symbol: 'ETH',
-              deci
+              decimals: 18,
+            },
+            blockExplorerUrls: ['
