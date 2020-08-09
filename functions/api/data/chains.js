@@ -19,4 +19,6 @@ module.exports = {
             blockExplorerUrls: ['https://etherscan.io'],
           },
         ],
-       
+        explorer: {
+          name: 'Etherscan',
+          url: '
