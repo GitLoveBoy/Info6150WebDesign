@@ -16,4 +16,7 @@ module.exports = {
               symbol: 'ETH',
               decimals: 18,
             },
-            blockExplorerUrls: ['
+            blockExplorerUrls: ['https://etherscan.io'],
+          },
+        ],
+       
