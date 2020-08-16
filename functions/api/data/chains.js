@@ -22,4 +22,6 @@ module.exports = {
         explorer: {
           name: 'Etherscan',
           url: 'https://etherscan.io',
-          icon: '/logos/explorer
+          icon: '/logos/explorers/etherscan.png',
+          block_path: '/block/{block}',
+ 
