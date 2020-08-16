@@ -24,4 +24,5 @@ module.exports = {
           url: 'https://etherscan.io',
           icon: '/logos/explorers/etherscan.png',
           block_path: '/block/{block}',
- 
+          address_path: '/address/{address}',
+          contrac
