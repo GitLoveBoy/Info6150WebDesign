@@ -30,4 +30,5 @@ module.exports = {
           transaction_path: '/tx/{tx}',
         },
         image: '/logos/chains/ethereum.png',
-     
+        color: '#c0c2c3',
+        website: 'https://ethereum.
