@@ -25,4 +25,5 @@ module.exports = {
           icon: '/logos/explorers/etherscan.png',
           block_path: '/block/{block}',
           address_path: '/address/{address}',
-          contrac
+          contract_path: '/token/{address}',
+          contract_0_path: '/addre
