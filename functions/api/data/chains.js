@@ -35,4 +35,6 @@ module.exports = {
         coingecko_id: 'ethereum',
       },
       {
-       
+        id: 'binance',
+        chain_id: 56,
+        name: 'BNB
