@@ -31,4 +31,8 @@ module.exports = {
         },
         image: '/logos/chains/ethereum.png',
         color: '#c0c2c3',
-        website: 'https://ethereum.
+        website: 'https://ethereum.org',
+        coingecko_id: 'ethereum',
+      },
+      {
+       
