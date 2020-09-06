@@ -42,4 +42,5 @@ module.exports = {
         provider_params: [
           {
             chainId: '0x38',
-  
+            chainName: 'BNB Chain',
+            rpcUrls: ['http
