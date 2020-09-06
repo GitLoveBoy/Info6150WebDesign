@@ -43,4 +43,4 @@ module.exports = {
           {
             chainId: '0x38',
             chainName: 'BNB Chain',
-            rpcUrls: ['http
+            rpcUrls: ['https://rpc.ankr.com/bsc', 'https://bsc-dataseed.binance.
