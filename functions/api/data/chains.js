@@ -37,4 +37,6 @@ module.exports = {
       {
         id: 'binance',
         chain_id: 56,
-        name: 'BNB
+        name: 'BNB Chain',
+        short_name: 'BNB',
+        provi
