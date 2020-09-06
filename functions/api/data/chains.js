@@ -39,4 +39,7 @@ module.exports = {
         chain_id: 56,
         name: 'BNB Chain',
         short_name: 'BNB',
-        provi
+        provider_params: [
+          {
+            chainId: '0x38',
+  
