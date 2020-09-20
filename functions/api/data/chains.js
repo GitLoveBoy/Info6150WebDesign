@@ -44,4 +44,5 @@ module.exports = {
             chainId: '0x38',
             chainName: 'BNB Chain',
             rpcUrls: ['https://rpc.ankr.com/bsc', 'https://bsc-dataseed.binance.org', 'https://bsc-dataseed1.defibit.io', 'https://bsc-dataseed1.ninicoin.io', 'https://bsc-dataseed1.binance.org'],
- 
+            nativeCurrency: {
+              name: 'BNB Toke
