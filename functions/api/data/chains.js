@@ -48,3 +48,5 @@ module.exports = {
               name: 'BNB Token',
               symbol: 'BNB',
               decimals: 18,
+            },
+            blockExplorerUrls: ['https
