@@ -49,4 +49,7 @@ module.exports = {
               symbol: 'BNB',
               decimals: 18,
             },
-            blockExplorerUrls: ['https
+            blockExplorerUrls: ['https://bscscan.com'],
+          },
+        ],
+        explor
