@@ -52,4 +52,6 @@ module.exports = {
             blockExplorerUrls: ['https://bscscan.com'],
           },
         ],
-        explor
+        explorer: {
+          name: 'BscScan',
+          url: 'https
