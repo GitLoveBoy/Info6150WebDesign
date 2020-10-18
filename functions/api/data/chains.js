@@ -55,4 +55,5 @@ module.exports = {
         explorer: {
           name: 'BscScan',
           url: 'https://bscscan.com',
-          icon: '/logos/explor
+          icon: '/logos/explorers/bscscan.png',
+          block_path: '/block/{block
