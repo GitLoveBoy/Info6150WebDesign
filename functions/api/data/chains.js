@@ -54,4 +54,5 @@ module.exports = {
         ],
         explorer: {
           name: 'BscScan',
-          url: 'https
+          url: 'https://bscscan.com',
+          icon: '/logos/explor
