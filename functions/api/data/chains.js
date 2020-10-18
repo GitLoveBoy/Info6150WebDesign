@@ -57,4 +57,6 @@ module.exports = {
           url: 'https://bscscan.com',
           icon: '/logos/explorers/bscscan.png',
           block_path: '/block/{block}',
-          address_path: '/address/{addre
+          address_path: '/address/{address}',
+          contract_path: '/token/{address}',
+       
