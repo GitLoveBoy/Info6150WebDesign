@@ -62,4 +62,5 @@ module.exports = {
           contract_0_path: '/address/{address}',
           transaction_path: '/tx/{tx}',
         },
-    
+        image: '/logos/chains/binance.png',
+        color
