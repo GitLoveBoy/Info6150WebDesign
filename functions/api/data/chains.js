@@ -65,4 +65,7 @@ module.exports = {
         image: '/logos/chains/binance.png',
         color: '#e8b30b',
         website: 'https://bnbchain.world',
-   
+        coingecko_id: 'binancecoin',
+      },
+      {
+        id: 'avalanc
