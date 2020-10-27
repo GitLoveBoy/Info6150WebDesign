@@ -63,4 +63,6 @@ module.exports = {
           transaction_path: '/tx/{tx}',
         },
         image: '/logos/chains/binance.png',
-        color
+        color: '#e8b30b',
+        website: 'https://bnbchain.world',
+   
