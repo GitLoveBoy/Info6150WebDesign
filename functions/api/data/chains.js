@@ -68,4 +68,6 @@ module.exports = {
         coingecko_id: 'binancecoin',
       },
       {
-        id: 'avalanc
+        id: 'avalanche',
+        chain_id: 43114,
+        name: 'Avalanche',
