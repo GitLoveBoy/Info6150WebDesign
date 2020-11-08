@@ -71,3 +71,5 @@ module.exports = {
         id: 'avalanche',
         chain_id: 43114,
         name: 'Avalanche',
+        short_name: 'AVAX',
+        provider_para
