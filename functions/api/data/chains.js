@@ -75,4 +75,5 @@ module.exports = {
         provider_params: [
           {
             chainId: '0xa86a',
-         
+            chainName: 'Avalanche C-Chain',
+            rpcUrl
