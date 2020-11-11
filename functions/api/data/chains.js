@@ -76,4 +76,4 @@ module.exports = {
           {
             chainId: '0xa86a',
             chainName: 'Avalanche C-Chain',
-            rpcUrl
+            rpcUrls: ['https://api.avax.network/ext/bc/C/rpc', 'https
