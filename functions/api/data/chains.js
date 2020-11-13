@@ -79,4 +79,7 @@ module.exports = {
             rpcUrls: ['https://api.avax.network/ext/bc/C/rpc', 'https://rpc.ankr.com/avalanche'],
             nativeCurrency: {
               name: 'Avalanche',
-              symbo
+              symbol: 'AVAX',
+              decimals: 18,
+            },
+        
