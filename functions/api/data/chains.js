@@ -78,4 +78,5 @@ module.exports = {
             chainName: 'Avalanche C-Chain',
             rpcUrls: ['https://api.avax.network/ext/bc/C/rpc', 'https://rpc.ankr.com/avalanche'],
             nativeCurrency: {
- 
+              name: 'Avalanche',
+              symbo
