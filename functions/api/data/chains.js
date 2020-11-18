@@ -82,4 +82,5 @@ module.exports = {
               symbol: 'AVAX',
               decimals: 18,
             },
-        
+            blockExplorerUrls: ['https://snowtrace.io'],
+          }
