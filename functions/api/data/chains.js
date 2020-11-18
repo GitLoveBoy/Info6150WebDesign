@@ -83,4 +83,7 @@ module.exports = {
               decimals: 18,
             },
             blockExplorerUrls: ['https://snowtrace.io'],
-          }
+          },
+        ],
+        explorer: {
+          name: 'Snow
