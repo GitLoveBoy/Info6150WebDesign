@@ -88,4 +88,5 @@ module.exports = {
         explorer: {
           name: 'Snowtrace',
           url: 'https://snowtrace.io',
-          icon: '/
+          icon: '/logos/explorers/snowtrace.png',
+          block_path: '/blo
