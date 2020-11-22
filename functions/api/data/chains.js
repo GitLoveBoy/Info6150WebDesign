@@ -86,4 +86,6 @@ module.exports = {
           },
         ],
         explorer: {
-          name: 'Snow
+          name: 'Snowtrace',
+          url: 'https://snowtrace.io',
+          icon: '/
