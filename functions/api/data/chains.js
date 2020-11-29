@@ -91,3 +91,5 @@ module.exports = {
           icon: '/logos/explorers/snowtrace.png',
           block_path: '/block/{block}',
           address_path: '/address/{address}',
+          contract_path: '/token/{address}',
+         
