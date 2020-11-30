@@ -97,4 +97,5 @@ module.exports = {
         },
         image: '/logos/chains/avalanche.png',
         color: '#e84143',
-        website: 'h
+        website: 'https://avax.network',
+        co
