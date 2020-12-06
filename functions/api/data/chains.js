@@ -98,4 +98,7 @@ module.exports = {
         image: '/logos/chains/avalanche.png',
         color: '#e84143',
         website: 'https://avax.network',
-        co
+        coingecko_id: 'avalanche-2',
+      },
+      {
+        id: 'polygo
