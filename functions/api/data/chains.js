@@ -101,4 +101,7 @@ module.exports = {
         coingecko_id: 'avalanche-2',
       },
       {
-        id: 'polygo
+        id: 'polygon',
+        chain_id: 137,
+        name: 'Polygon',
+   
