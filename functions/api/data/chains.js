@@ -108,4 +108,5 @@ module.exports = {
         provider_params: [
           {
             chainId: '0x89',
-            chainName: '
+            chainName: 'Polygon',
+            rpcUrls: ['https://polygon-rpc.com', 'ht
