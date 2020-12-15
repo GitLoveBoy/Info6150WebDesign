@@ -106,4 +106,6 @@ module.exports = {
         name: 'Polygon',
         short_name: 'MATIC',
         provider_params: [
-        
+          {
+            chainId: '0x89',
+            chainName: '
