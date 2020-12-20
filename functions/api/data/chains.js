@@ -112,4 +112,7 @@ module.exports = {
             rpcUrls: ['https://polygon-rpc.com', 'https://rpc.ankr.com/polygon'],
             nativeCurrency: {
               name: 'Matic',
-              symbol: 'MATIC'
+              symbol: 'MATIC',
+              decimals: 18,
+            },
+         
