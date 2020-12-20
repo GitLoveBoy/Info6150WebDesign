@@ -115,4 +115,4 @@ module.exports = {
               symbol: 'MATIC',
               decimals: 18,
             },
-         
+            blockExplorerUrls: ['https://polygonscan
