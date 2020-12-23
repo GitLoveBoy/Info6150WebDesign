@@ -119,3 +119,5 @@ module.exports = {
           },
         ],
         explorer: {
+          name: 'Polygonscan',
+          url: 'https://poly
