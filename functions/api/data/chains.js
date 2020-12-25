@@ -120,4 +120,5 @@ module.exports = {
         ],
         explorer: {
           name: 'Polygonscan',
-          url: 'https://poly
+          url: 'https://polygonscan.com',
+          icon: '/logos/explorers/polygonsca
