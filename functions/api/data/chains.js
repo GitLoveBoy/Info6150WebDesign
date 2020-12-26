@@ -123,4 +123,5 @@ module.exports = {
           url: 'https://polygonscan.com',
           icon: '/logos/explorers/polygonscan.png',
           block_path: '/block/{block}',
-          addr
+          address_path: '/address/{address}',
+          contract_path: '/token/{addres
