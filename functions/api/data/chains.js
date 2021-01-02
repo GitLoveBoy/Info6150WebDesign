@@ -128,4 +128,6 @@ module.exports = {
           contract_0_path: '/address/{address}',
           transaction_path: '/tx/{tx}',
         },
-        image: '/l
+        image: '/logos/chains/polygon.png',
+        color: '#8247e5',
+      
