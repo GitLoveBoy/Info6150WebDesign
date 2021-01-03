@@ -134,4 +134,6 @@ module.exports = {
         coingecko_id: 'matic-network',
       },
       {
-        i
+        id: 'optimism',
+        chain_id: 10,
+        nam
