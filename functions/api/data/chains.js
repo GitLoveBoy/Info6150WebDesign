@@ -131,4 +131,7 @@ module.exports = {
         image: '/logos/chains/polygon.png',
         color: '#8247e5',
         website: 'https://polygon.technology',
-        coi
+        coingecko_id: 'matic-network',
+      },
+      {
+        i
