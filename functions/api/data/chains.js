@@ -138,4 +138,7 @@ module.exports = {
         chain_id: 10,
         name: 'Optimism',
         short_name: 'OPT',
-        provider_pa
+        provider_params: [
+          {
+            chainId: '0xa',
+       
