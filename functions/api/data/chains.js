@@ -141,4 +141,5 @@ module.exports = {
         provider_params: [
           {
             chainId: '0xa',
-       
+            chainName: 'Optimism',
+            rpcUrls: ['https:/
