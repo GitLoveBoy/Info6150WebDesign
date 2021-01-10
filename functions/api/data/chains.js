@@ -142,4 +142,6 @@ module.exports = {
           {
             chainId: '0xa',
             chainName: 'Optimism',
-            rpcUrls: ['https:/
+            rpcUrls: ['https://mainnet.optimism.io'],
+            nativeCurrency: {
+           
