@@ -144,4 +144,6 @@ module.exports = {
             chainName: 'Optimism',
             rpcUrls: ['https://mainnet.optimism.io'],
             nativeCurrency: {
-           
+              name: 'Ether',
+              symbol: 'OETH',
+             
