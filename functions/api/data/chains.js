@@ -148,4 +148,5 @@ module.exports = {
               symbol: 'OETH',
               decimals: 18,
             },
-            blockEx
+            blockExplorerUrls: ['https://optimistic.etherscan.io'],
+    
