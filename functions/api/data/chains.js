@@ -146,4 +146,6 @@ module.exports = {
             nativeCurrency: {
               name: 'Ether',
               symbol: 'OETH',
-             
+              decimals: 18,
+            },
+            blockEx
