@@ -149,4 +149,7 @@ module.exports = {
               decimals: 18,
             },
             blockExplorerUrls: ['https://optimistic.etherscan.io'],
-    
+          },
+        ],
+        explorer: {
+       
