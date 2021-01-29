@@ -152,4 +152,5 @@ module.exports = {
           },
         ],
         explorer: {
-       
+          name: 'Etherscan',
+          url: 'https://optimistic.ethe
