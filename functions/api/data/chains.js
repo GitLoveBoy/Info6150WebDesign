@@ -157,4 +157,5 @@ module.exports = {
           icon: '/logos/explorers/optimism.png',
           block_path: '/block/{block}',
           address_path: '/address/{address}',
-      
+          contract_path: '/token/{address}',
+          contr
