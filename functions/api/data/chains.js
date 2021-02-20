@@ -159,4 +159,6 @@ module.exports = {
           address_path: '/address/{address}',
           contract_path: '/token/{address}',
           contract_0_path: '/address/{address}',
-          transaction
+          transaction_path: '/tx/{tx}',
+        },
+        image: '/logos/
