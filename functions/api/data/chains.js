@@ -161,4 +161,5 @@ module.exports = {
           contract_0_path: '/address/{address}',
           transaction_path: '/tx/{tx}',
         },
-        image: '/logos/
+        image: '/logos/chains/optimism.png',
+        color: '#dc2626',
