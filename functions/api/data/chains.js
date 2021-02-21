@@ -164,4 +164,7 @@ module.exports = {
         image: '/logos/chains/optimism.png',
         color: '#dc2626',
         website: 'https://optimism.io',
-        co
+        coingecko_id: 'optimism',
+      },
+      {
+        id: 'arbitrum',
