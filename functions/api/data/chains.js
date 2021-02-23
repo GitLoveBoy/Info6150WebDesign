@@ -168,3 +168,6 @@ module.exports = {
       },
       {
         id: 'arbitrum',
+        chain_id: 42161,
+        name: 'Arbitrum',
+  
