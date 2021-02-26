@@ -170,4 +170,5 @@ module.exports = {
         id: 'arbitrum',
         chain_id: 42161,
         name: 'Arbitrum',
-  
+        short_name: 'ARB',
+        provider_param
