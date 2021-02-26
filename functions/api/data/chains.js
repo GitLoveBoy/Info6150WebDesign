@@ -174,4 +174,5 @@ module.exports = {
         provider_params: [
           {
             chainId: '0xa4b1',
-            chain
+            chainName: 'Arbitrum',
+            rpcUrls: ['https://arb1.arbitru
