@@ -175,4 +175,5 @@ module.exports = {
           {
             chainId: '0xa4b1',
             chainName: 'Arbitrum',
-            rpcUrls: ['https://arb1.arbitru
+            rpcUrls: ['https://arb1.arbitrum.io/rpc', 'https://rpc.ankr.com/arbitrum'],
+            nati
