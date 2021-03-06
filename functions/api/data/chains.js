@@ -177,4 +177,6 @@ module.exports = {
             chainName: 'Arbitrum',
             rpcUrls: ['https://arb1.arbitrum.io/rpc', 'https://rpc.ankr.com/arbitrum'],
             nativeCurrency: {
-              name: 'Arbitrum Ether
+              name: 'Arbitrum Ether',
+              symbol: 'aETH',
+              decim
