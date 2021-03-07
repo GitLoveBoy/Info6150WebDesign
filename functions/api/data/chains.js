@@ -179,4 +179,6 @@ module.exports = {
             nativeCurrency: {
               name: 'Arbitrum Ether',
               symbol: 'aETH',
-              decim
+              decimals: 18,
+            },
+            blockExplorerUrl
