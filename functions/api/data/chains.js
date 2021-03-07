@@ -181,4 +181,7 @@ module.exports = {
               symbol: 'aETH',
               decimals: 18,
             },
-            blockExplorerUrl
+            blockExplorerUrls: ['https://arbiscan.io'],
+          },
+        ],
+        
