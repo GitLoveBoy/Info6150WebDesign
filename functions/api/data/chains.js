@@ -184,4 +184,6 @@ module.exports = {
             blockExplorerUrls: ['https://arbiscan.io'],
           },
         ],
-        
+        explorer: {
+          name: 'Arbiscan',
+          url: 'https://a
