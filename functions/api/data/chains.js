@@ -187,4 +187,6 @@ module.exports = {
         explorer: {
           name: 'Arbiscan',
           url: 'https://arbiscan.io',
-          icon: '/logos/explorers/a
+          icon: '/logos/explorers/arbiscan.png',
+          block_path: '/block/{block}',
+          a
