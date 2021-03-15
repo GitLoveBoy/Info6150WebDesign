@@ -192,4 +192,6 @@ module.exports = {
           address_path: '/address/{address}',
           contract_path: '/token/{address}',
           contract_0_path: '/address/{address}',
-          transaction_pat
+          transaction_path: '/tx/{tx}',
+        },
+        image: '/logos/chains/arbitr
