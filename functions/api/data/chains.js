@@ -190,4 +190,5 @@ module.exports = {
           icon: '/logos/explorers/arbiscan.png',
           block_path: '/block/{block}',
           address_path: '/address/{address}',
-          
+          contract_path: '/token/{address}',
+          contract_0_
