@@ -189,4 +189,5 @@ module.exports = {
           url: 'https://arbiscan.io',
           icon: '/logos/explorers/arbiscan.png',
           block_path: '/block/{block}',
-          a
+          address_path: '/address/{address}',
+          
