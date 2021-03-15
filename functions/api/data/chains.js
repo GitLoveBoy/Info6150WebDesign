@@ -191,4 +191,5 @@ module.exports = {
           block_path: '/block/{block}',
           address_path: '/address/{address}',
           contract_path: '/token/{address}',
-          contract_0_
+          contract_0_path: '/address/{address}',
+          transaction_pat
