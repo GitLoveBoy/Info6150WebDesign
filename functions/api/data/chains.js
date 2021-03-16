@@ -194,4 +194,6 @@ module.exports = {
           contract_0_path: '/address/{address}',
           transaction_path: '/tx/{tx}',
         },
-        image: '/logos/chains/arbitr
+        image: '/logos/chains/arbitrum.png',
+        color: '#28a0f0',
+        website: 'h
