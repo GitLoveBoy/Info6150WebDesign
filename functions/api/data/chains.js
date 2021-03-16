@@ -196,4 +196,6 @@ module.exports = {
         },
         image: '/logos/chains/arbitrum.png',
         color: '#28a0f0',
-        website: 'h
+        website: 'https://arbitrum.io',
+        coingecko_id: 'arbitrum',
+  
