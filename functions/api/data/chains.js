@@ -201,4 +201,6 @@ module.exports = {
       },
       {
         id: 'fantom',
-        chain_id: 2
+        chain_id: 250,
+        name: 'Fantom',
+        short_name: 'FTM'
