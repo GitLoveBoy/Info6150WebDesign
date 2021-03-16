@@ -198,4 +198,7 @@ module.exports = {
         color: '#28a0f0',
         website: 'https://arbitrum.io',
         coingecko_id: 'arbitrum',
-  
+      },
+      {
+        id: 'fantom',
+        chain_id: 2
