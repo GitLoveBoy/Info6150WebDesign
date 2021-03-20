@@ -203,4 +203,7 @@ module.exports = {
         id: 'fantom',
         chain_id: 250,
         name: 'Fantom',
-        short_name: 'FTM'
+        short_name: 'FTM',
+        provider_params: [
+          {
+          
