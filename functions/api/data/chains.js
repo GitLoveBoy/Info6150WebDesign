@@ -209,4 +209,6 @@ module.exports = {
             chainId: '0xfa',
             chainName: 'Fantom Opera',
             rpcUrls: ['https://rpc.ftm.tools', 'https://rpc.ankr.com/fantom', 'https://rpcapi.fantom.network'],
-            nativeCurrency
+            nativeCurrency: {
+              name: 'Fantom',
+              symbol: 
