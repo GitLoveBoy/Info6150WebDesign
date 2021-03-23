@@ -206,4 +206,6 @@ module.exports = {
         short_name: 'FTM',
         provider_params: [
           {
-          
+            chainId: '0xfa',
+            chainName: 'Fantom Opera',
+            rpc
