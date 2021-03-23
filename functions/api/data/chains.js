@@ -208,4 +208,4 @@ module.exports = {
           {
             chainId: '0xfa',
             chainName: 'Fantom Opera',
-            rpc
+            rpcUrls: ['https://rpc.ftm.tools', 'https://rpc.ankr.com/fantom', 'https://r
