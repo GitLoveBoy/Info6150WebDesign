@@ -215,4 +215,7 @@ module.exports = {
               decimals: 18,
             },
             blockExplorerUrls: ['https://ftmscan.com'],
-       
+          },
+        ],
+        explorer: {
+         
