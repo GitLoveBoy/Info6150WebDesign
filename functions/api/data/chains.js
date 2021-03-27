@@ -211,4 +211,7 @@ module.exports = {
             rpcUrls: ['https://rpc.ftm.tools', 'https://rpc.ankr.com/fantom', 'https://rpcapi.fantom.network'],
             nativeCurrency: {
               name: 'Fantom',
-              symbol: 
+              symbol: 'FTM',
+              decimals: 18,
+            },
+     
