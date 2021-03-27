@@ -214,4 +214,5 @@ module.exports = {
               symbol: 'FTM',
               decimals: 18,
             },
-     
+            blockExplorerUrls: ['https://ftmscan.com'],
+       
