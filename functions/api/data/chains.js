@@ -219,4 +219,6 @@ module.exports = {
         ],
         explorer: {
           name: 'FTMScan',
-          url: 'https://ftmscan.c
+          url: 'https://ftmscan.com',
+          icon: '/logos/explorers/ftmscan.png',
+          bloc
