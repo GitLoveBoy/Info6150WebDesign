@@ -221,4 +221,5 @@ module.exports = {
           name: 'FTMScan',
           url: 'https://ftmscan.com',
           icon: '/logos/explorers/ftmscan.png',
-          bloc
+          block_path: '/block/{block}',
+          address_path: '/a
