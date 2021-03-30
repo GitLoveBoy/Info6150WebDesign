@@ -222,4 +222,5 @@ module.exports = {
           url: 'https://ftmscan.com',
           icon: '/logos/explorers/ftmscan.png',
           block_path: '/block/{block}',
-          address_path: '/a
+          address_path: '/address/{address}',
+          contract_path: '/to
