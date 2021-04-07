@@ -228,4 +228,6 @@ module.exports = {
           transaction_path: '/tx/{tx}',
         },
         image: '/logos/chains/fantom.png',
-        color: '#186
+        color: '#1869ff',
+        website: 'https://fantom.foundation',
+        coingecko_id:
