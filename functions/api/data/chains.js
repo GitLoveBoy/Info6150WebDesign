@@ -230,4 +230,8 @@ module.exports = {
         image: '/logos/chains/fantom.png',
         color: '#1869ff',
         website: 'https://fantom.foundation',
-        coingecko_id:
+        coingecko_id: 'fantom',
+      },
+      {
+        id: 'gnosis',
+        chain_id
