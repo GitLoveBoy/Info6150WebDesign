@@ -234,4 +234,6 @@ module.exports = {
       },
       {
         id: 'gnosis',
-        chain_id
+        chain_id: 100,
+        name: 'Gnosis',
+        short_name: 'G
