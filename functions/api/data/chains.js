@@ -236,4 +236,7 @@ module.exports = {
         id: 'gnosis',
         chain_id: 100,
         name: 'Gnosis',
-        short_name: 'G
+        short_name: 'GNO',
+        provider_params: [
+          {
+         
