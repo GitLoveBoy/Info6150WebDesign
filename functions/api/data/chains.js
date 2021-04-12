@@ -241,4 +241,4 @@ module.exports = {
           {
             chainId: '0x64',
             chainName: 'Gnosis',
-  
+            rpcUrls: ['https://rpc.ankr.com/gno
