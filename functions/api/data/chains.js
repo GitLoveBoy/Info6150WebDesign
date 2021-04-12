@@ -239,4 +239,6 @@ module.exports = {
         short_name: 'GNO',
         provider_params: [
           {
-         
+            chainId: '0x64',
+            chainName: 'Gnosis',
+  
