@@ -247,4 +247,6 @@ module.exports = {
               symbol: 'xDAI',
               decimals: 18,
             },
-            blockExplorerUrls:
+            blockExplorerUrls: ['https://blockscout.com/xdai/mainnet/'],
+          },
+     
