@@ -243,4 +243,6 @@ module.exports = {
             chainName: 'Gnosis',
             rpcUrls: ['https://rpc.ankr.com/gnosis'],
             nativeCurrency: {
-              name: 'xDAI'
+              name: 'xDAI',
+              symbol: 'xDAI',
+              d
