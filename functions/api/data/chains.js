@@ -249,4 +249,7 @@ module.exports = {
             },
             blockExplorerUrls: ['https://blockscout.com/xdai/mainnet/'],
           },
-     
+        ],
+        explorer: {
+          name: 'BlockScout',
+   
