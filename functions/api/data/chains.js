@@ -252,4 +252,6 @@ module.exports = {
         ],
         explorer: {
           name: 'BlockScout',
-          url: 'https://blockscout.com/xdai/mainnet'
+          url: 'https://blockscout.com/xdai/mainnet',
+          icon: '/logos/explorers/blockscout.png',
+          b
