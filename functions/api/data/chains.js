@@ -255,4 +255,5 @@ module.exports = {
           url: 'https://blockscout.com/xdai/mainnet',
           icon: '/logos/explorers/blockscout.png',
           block_path: '/block/{block}',
-          address_pat
+          address_path: '/address/{address}',
+          contract_path: '/token/
