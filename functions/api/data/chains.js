@@ -254,4 +254,5 @@ module.exports = {
           name: 'BlockScout',
           url: 'https://blockscout.com/xdai/mainnet',
           icon: '/logos/explorers/blockscout.png',
-          b
+          block_path: '/block/{block}',
+          address_pat
