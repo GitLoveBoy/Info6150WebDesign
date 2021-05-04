@@ -256,4 +256,5 @@ module.exports = {
           icon: '/logos/explorers/blockscout.png',
           block_path: '/block/{block}',
           address_path: '/address/{address}',
-          contract_path: '/token/
+          contract_path: '/token/{address}',
+          contract_0_path: '/addre
