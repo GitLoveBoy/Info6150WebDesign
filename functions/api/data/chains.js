@@ -261,4 +261,5 @@ module.exports = {
           transaction_path: '/tx/{tx}',
         },
         image: '/logos/chains/gnosis.png',
-        color: 
+        color: '#48a9a6',
+        website: 'https://gnosischain.com',
