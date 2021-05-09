@@ -263,3 +263,7 @@ module.exports = {
         image: '/logos/chains/gnosis.png',
         color: '#48a9a6',
         website: 'https://gnosischain.com',
+        coingecko_id: 'gnosis',
+      },
+      {
+       
