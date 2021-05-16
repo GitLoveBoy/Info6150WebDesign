@@ -266,4 +266,6 @@ module.exports = {
         coingecko_id: 'gnosis',
       },
       {
-       
+        id: 'moonbeam',
+        chain_id: 1284,
+        name: 'M
