@@ -268,4 +268,7 @@ module.exports = {
       {
         id: 'moonbeam',
         chain_id: 1284,
-        name: 'M
+        name: 'Moonbeam',
+        short_name: 'MBEAM',
+        provider_params: [
+    
