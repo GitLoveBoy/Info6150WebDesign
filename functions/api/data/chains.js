@@ -274,4 +274,4 @@ module.exports = {
           {
             chainId: '0x504',
             chainName: 'Moonbeam',
-            rpcUrls: ['https://rpc
+            rpcUrls: ['https://rpc.api.moonbeam.network', 'https://rpc.ankr.com/moonbeam'],
