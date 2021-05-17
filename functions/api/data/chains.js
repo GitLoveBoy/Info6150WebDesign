@@ -271,4 +271,6 @@ module.exports = {
         name: 'Moonbeam',
         short_name: 'MBEAM',
         provider_params: [
-    
+          {
+            chainId: '0x504',
+         
