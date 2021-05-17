@@ -273,4 +273,5 @@ module.exports = {
         provider_params: [
           {
             chainId: '0x504',
-         
+            chainName: 'Moonbeam',
+            rpcUrls: ['https://rpc
