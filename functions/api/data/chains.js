@@ -276,4 +276,6 @@ module.exports = {
             chainName: 'Moonbeam',
             rpcUrls: ['https://rpc.api.moonbeam.network', 'https://rpc.ankr.com/moonbeam'],
             nativeCurrency: {
-              name: 
+              name: 'Glimmer',
+              symbol: 'GLMR',
+              de
