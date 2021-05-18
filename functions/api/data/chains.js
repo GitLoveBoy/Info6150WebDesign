@@ -280,4 +280,7 @@ module.exports = {
               symbol: 'GLMR',
               decimals: 18,
             },
-            blockExplorerUr
+            blockExplorerUrls: ['https://moonscan.io'],
+          },
+        ],
+        explore
