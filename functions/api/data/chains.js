@@ -278,4 +278,6 @@ module.exports = {
             nativeCurrency: {
               name: 'Glimmer',
               symbol: 'GLMR',
-              de
+              decimals: 18,
+            },
+            blockExplorerUr
