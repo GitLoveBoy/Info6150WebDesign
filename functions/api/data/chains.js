@@ -283,4 +283,6 @@ module.exports = {
             blockExplorerUrls: ['https://moonscan.io'],
           },
         ],
-        explore
+        explorer: {
+          name: 'Moonscan',
+          url: 
