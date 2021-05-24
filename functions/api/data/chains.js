@@ -285,4 +285,5 @@ module.exports = {
         ],
         explorer: {
           name: 'Moonscan',
-          url: 
+          url: 'https://moonscan.io',
+          icon: '/logos/explo
