@@ -290,4 +290,6 @@ module.exports = {
           block_path: '/block/{block}',
           address_path: '/address/{address}',
           contract_path: '/token/{address}',
-          contract_0_path: '/address/{addres
+          contract_0_path: '/address/{address}',
+          transaction_path: '/tx/{tx}',
+        }
