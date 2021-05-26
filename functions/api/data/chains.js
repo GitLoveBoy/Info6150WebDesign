@@ -289,4 +289,5 @@ module.exports = {
           icon: '/logos/explorers/moonbeam.png',
           block_path: '/block/{block}',
           address_path: '/address/{address}',
-          contract_pa
+          contract_path: '/token/{address}',
+          contract_0_path: '/address/{addres
