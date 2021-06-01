@@ -300,4 +300,6 @@ module.exports = {
       },
       {
         id: 'moonriver',
-        chain_id: 
+        chain_id: 1285,
+        name: 'Moonriver',
+        short_n
