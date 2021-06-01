@@ -295,4 +295,7 @@ module.exports = {
         },
         image: '/logos/chains/moonbeam.png',
         color: '#53cbc8',
-        website: 'https://moonbeam.netw
+        website: 'https://moonbeam.network',
+        coingecko_id: 'moonbeam',
+      },
+      {
