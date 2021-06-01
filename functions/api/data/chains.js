@@ -299,3 +299,5 @@ module.exports = {
         coingecko_id: 'moonbeam',
       },
       {
+        id: 'moonriver',
+        chain_id: 
