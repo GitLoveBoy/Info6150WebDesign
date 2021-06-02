@@ -305,4 +305,5 @@ module.exports = {
         short_name: 'MOVR',
         provider_params: [
           {
-     
+            chainId: '0x505',
+            chainName: 'Moonriver'
