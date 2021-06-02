@@ -302,4 +302,7 @@ module.exports = {
         id: 'moonriver',
         chain_id: 1285,
         name: 'Moonriver',
-        short_n
+        short_name: 'MOVR',
+        provider_params: [
+          {
+     
