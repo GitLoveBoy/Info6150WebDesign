@@ -306,4 +306,5 @@ module.exports = {
         provider_params: [
           {
             chainId: '0x505',
-            chainName: 'Moonriver'
+            chainName: 'Moonriver',
+            rpcUrls: ['https://rpc.api.moonriver.
