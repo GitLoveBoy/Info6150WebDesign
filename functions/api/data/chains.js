@@ -310,4 +310,7 @@ module.exports = {
             rpcUrls: ['https://rpc.api.moonriver.moonbeam.network'],
             nativeCurrency: {
               name: 'Moonriver',
-              symbol: 'MOVR
+              symbol: 'MOVR',
+              decimals: 18,
+            },
+            
