@@ -313,4 +313,6 @@ module.exports = {
               symbol: 'MOVR',
               decimals: 18,
             },
-            
+            blockExplorerUrls: ['https://moonriver.moonscan.io'],
+          },
+  
