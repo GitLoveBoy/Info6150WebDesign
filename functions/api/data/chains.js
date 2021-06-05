@@ -308,4 +308,6 @@ module.exports = {
             chainId: '0x505',
             chainName: 'Moonriver',
             rpcUrls: ['https://rpc.api.moonriver.moonbeam.network'],
-            nativeCurrency: 
+            nativeCurrency: {
+              name: 'Moonriver',
+              symbol: 'MOVR
