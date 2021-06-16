@@ -315,4 +315,6 @@ module.exports = {
             },
             blockExplorerUrls: ['https://moonriver.moonscan.io'],
           },
-  
+        ],
+        explorer: {
+          name: 'Mo
