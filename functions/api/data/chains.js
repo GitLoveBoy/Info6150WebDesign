@@ -317,4 +317,6 @@ module.exports = {
           },
         ],
         explorer: {
-          name: 'Mo
+          name: 'Moonscan',
+          url: 'https://moonriver.moonscan.io',
+   
