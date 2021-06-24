@@ -320,4 +320,5 @@ module.exports = {
           name: 'Moonscan',
           url: 'https://moonriver.moonscan.io',
           icon: '/logos/explorers/moonriver.png',
-        
+          block_path: '/block/{block}',
+          address_path: '
