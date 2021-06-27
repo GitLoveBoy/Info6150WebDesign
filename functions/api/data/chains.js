@@ -327,4 +327,5 @@ module.exports = {
           transaction_path: '/tx/{tx}',
         },
         image: '/logos/chains/moonriver.png',
-        color: '#e6af0
+        color: '#e6af07',
+        website: 'https://moonbeam.network/n
