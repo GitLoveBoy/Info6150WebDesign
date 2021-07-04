@@ -328,4 +328,5 @@ module.exports = {
         },
         image: '/logos/chains/moonriver.png',
         color: '#e6af07',
-        website: 'https://moonbeam.network/n
+        website: 'https://moonbeam.network/networks/moonriver',
+        coingecko_id: 'moonriver',
