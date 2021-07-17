@@ -1,1 +1,5 @@
-const chains = require('./ch
+const chains = require('./chains');
+
+module.exports = {
+  chains,
+};
