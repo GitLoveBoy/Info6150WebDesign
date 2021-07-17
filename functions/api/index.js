@@ -159,3 +159,59 @@ exports.handler = async (event, context, callback) => {
             const TwitterClient = require('twitter-api-client').TwitterClient;
             const { api_key, api_secret, access_token, access_token_secret } = { ...config?.socials?.twitter };
             if (twitter.key === api_key) {
+              const twitter_client = new TwitterClient({
+                apiKey: api_key,
+                apiSecret: api_secret,
+                accessToken: access_token,
+                accessTokenSecret: access_token_secret
+              });
+              const { messages } = { ...twitter };
+              messages.forEach(async (m, i) => {
+                try {
+                  await twitter_client.tweets.statusesUpdate({
+                    status: m,
+                  });
+                } catch (error) {}
+              });
+            }
+          }
+          if (telegram?.messages?.length > 0) {
+            const { api, key, channel } = { ...config?.socials?.telegram };
+            if (telegram.key === key) {
+              const { messages, parameters } = { ...telegram };
+              const { web_preview } = { ...parameters };
+              messages.forEach(async (m, i) => {
+                try {
+                  await axios.get(`${api}/bot${key}/sendMessage`, {
+                    params: {
+                      chat_id: channel,
+                      parse_mode: 'html',
+                      disable_web_page_preview: !(web_preview === true || web_preview === 'true'),
+                      disable_notification: i < messages.length - 1,
+                      text: m,
+                    },
+                  });
+                } catch (error) {}
+              });
+            }
+          }
+          break;
+        default:
+          break;
+      };
+
+      // set response
+      if (res?.data) {
+        response = res.data;
+        // remove error config
+        if (response.error?.config) {
+          delete response.error.config;
+        }
+      }
+      break;
+    default:
+      if (!req.url) {
+        response = await require('./services/alerts')();
+      }
+      break;
+  };
