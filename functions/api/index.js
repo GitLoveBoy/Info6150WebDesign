@@ -100,3 +100,62 @@ exports.handler = async (event, context, callback) => {
             res = { data: response_cache };
           }
           res.data.cache_hit = cache_hit;
+          break;
+        case 'ens':
+          if (ens) {
+            const api = axios.create({ baseURL: ens });
+            res = await api.get(path, { params })
+              .catch(error => { return { data: { error } }; });
+          }
+          break;
+        case 'fear_and_greed':
+          if (fear_and_greed) {
+            path = path || '/fng/';
+            params = {
+              ...params,
+              limit: 31,
+            };
+            const api = axios.create({ baseURL: fear_and_greed });
+            res = await api.get(path, { params })
+              .catch(error => { return { data: { error } }; });
+          }
+          break;
+        case 'news':
+          if (news?.api) {
+            path = path || '/posts/';
+            path = `${path}${!path.endsWith('/') ? '/' : ''}`;
+            params = {
+              ...params,
+              auth_token: news.key,
+            };
+            const api = axios.create({ baseURL: news.api });
+            res = await api.get(path, { params })
+              .catch(error => { return { data: { error } }; });
+          }
+          break;
+        case 'whale_alert':
+          if (whale_alert?.api) {
+            path = path || '/transactions';
+            params = {
+              ...params,
+              api_key: whale_alert.key,
+            };
+            const api = axios.create({ baseURL: whale_alert.api });
+            res = await api.get(path, { params })
+              .catch(error => { return { data: { error } }; });
+          }
+          break;
+        case 'data':
+          let data = { chains };
+          if (data[params.collection]) {
+            data = data[params.collection];
+          }
+          res = { data };
+          break;
+        case 'broadcast':
+          const { twitter, telegram } = { ...params };
+          if (twitter?.messages?.length > 0) {
+            // import twitter api
+            const TwitterClient = require('twitter-api-client').TwitterClient;
+            const { api_key, api_secret, access_token, access_token_secret } = { ...config?.socials?.twitter };
+            if (twitter.key === api_key) {
