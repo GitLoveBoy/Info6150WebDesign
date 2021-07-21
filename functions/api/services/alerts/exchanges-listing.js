@@ -54,3 +54,77 @@ const exchanges = [
   // },
   {
     id: 'kucoin',
+    title: 'Kucoin',
+    url: 'https://www.kucoin.com',
+    path: '/rss/news',
+    keywords: ['gets listed on'],
+  },
+  {
+    id: 'kraken',
+    title: 'Kraken',
+    url: 'https://blog.kraken.com',
+    path: '/kraken-news/announcements',
+    keywords: ['trading starts'],
+  },
+];
+
+module.exports = async () => {
+  let data = [];
+  for (let i = 0; i < exchanges.length; i++) {
+    const exchange = exchanges[i];
+    const { id, url, path, params, headers, keywords } = { ...exchange };
+    const web = axios.create({ baseURL: url });
+    const res = await web.get(path || '', {
+      params,
+      headers,
+    }).catch(error => { return { data: { error } }; });
+    const html = res?.data && !res.data.error && parse(res.data);
+    if (html) {
+      switch (id) {
+        case 'binance':
+          try {
+            const object = html.querySelector('#link-0-0-p1');
+            const title = object.textContent;
+            data.push({
+              exchange,
+              title,
+              url: `${url}${object.getAttribute('href')}`,
+            });
+          } catch (error) {}
+          break;
+        case 'coinbase':
+          try {
+            const object = html.querySelector('h1').querySelector('a');
+            const title = object.textContent;
+            if (title && (!keywords || keywords.length < 1 || keywords.findIndex(k => title.toLowerCase().includes(k)) > -1)) {
+              data.push({
+                exchange,
+                title,
+                url: _.head(object.getAttribute('href')?.split('?')),
+              });
+            }
+          } catch (error) {}
+          break;
+        case 'coinlist':
+          try {
+            const object = html.querySelector('.m-article-card__info-link');
+            const title = object.querySelector('.m-article-card__title')?.getAttribute('title');
+            if (title && (!keywords || keywords.length < 1 || keywords.findIndex(k => title.toLowerCase().includes(k)) > -1)) {
+              data.push({
+                exchange,
+                title,
+                url: `${url}${object.getAttribute('href')}`,
+              });
+            }
+          } catch (error) {}
+          break;
+        case 'okex':
+          try {
+            const object = html.querySelector('.article-list-item').querySelector('a');
+            const title = object.textContent;
+            if (title && (!keywords || keywords.length < 1 || keywords.findIndex(k => title.toLowerCase().includes(k)) > -1)) {
+              data.push({
+                exchange,
+                title,
+                url: `${url}${object.getAttribute('href')}`,
+              });
