@@ -1,0 +1,32 @@
+
+{
+  "name": "coinhippo-api",
+  "version": "0.0.1",
+  "description": "API of CoinHippo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoinHippo-Labs/coinhippo-api.git"
+  },
+  "author": "CoinHippo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CoinHippo-Labs/coinhippo-api/issues"
+  },
+  "homepage": "https://github.com/CoinHippo-Labs/coinhippo-api#readme",
+  "dependencies": {
+    "axios": "^1.2.5",
+    "config-yml": "^0.10.3",
+    "ethers": "^5.7.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "node-html-parser": "^6.1.4",
+    "numeral": "2.0.6",
+    "twitter-api-client": "^1.6.1"
+  }
+}

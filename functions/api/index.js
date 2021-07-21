@@ -215,3 +215,7 @@ exports.handler = async (event, context, callback) => {
       }
       break;
   };
+
+  // return response
+  return response;
+};
