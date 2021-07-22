@@ -192,3 +192,45 @@ module.exports = async () => {
     const id = 'latest-exchanges-listing';
     const response = await crud({
       collection: 'tmp',
+      method: 'get',
+      id,
+    });
+    const latest = { ...response };
+    data = _.slice(data.filter(d => d.exchange && d.title && d.url && d.url !== latest[d.exchange.id]), 0, 1);
+    const twitter = [], telegram = [];
+    data.forEach((d, i) => {
+      const { exchange, title, url } = { ...d };
+      latest[exchange.id] = url;
+      twitter.push(`${i === 0 ? `💎 ${exchange.title} ${exchange.event || 'Listing'}\n` : ''}\n${title}\n${url}\n\n#${exchange.title?.split(' ').join('')} #Cryptocurrency`);
+      telegram.push(`${i === 0 ? `💎 <b><pre>${exchange.title} ${exchange.event || 'Listing'}</pre></b>\n` : ''}${title}\n<pre>via</pre> <a href="${url}">${new URL(url).hostname}</a>`);
+    });
+    if (data.length > 0) {
+      await crud({
+        collection: 'tmp',
+        method: 'set',
+        id,
+        ...latest,
+      });
+      if (twitter.length > 0 || telegram.length > 0) {
+        const { coinhippo } = { ...config?.api?.endpoints };
+        const { socials } = { ...config };
+        const api = axios.create({ baseURL: coinhippo });
+        await api.post('', {
+          module: 'broadcast',
+          twitter: {
+            messages: twitter,
+            key: socials?.twitter?.api_key,
+          },
+          telegram: {
+            messages: telegram,
+            key: socials?.telegram?.key,
+            parameters: {
+              web_preview: true,
+            },
+          },
+        }).catch(error => { return { data: { error } }; });
+      }
+    }
+  }
+  return data.length > 0;
+};
