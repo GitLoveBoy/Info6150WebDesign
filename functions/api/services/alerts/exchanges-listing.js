@@ -128,3 +128,67 @@ module.exports = async () => {
                 title,
                 url: `${url}${object.getAttribute('href')}`,
               });
+            }
+          } catch (error) {}
+          break;
+        case 'ftx':
+          try {
+            const object = html.querySelector('.article-list-item').querySelector('a');
+            const title = object.textContent;
+            if (title && (!keywords || keywords.length < 1 || keywords.findIndex(k => title.toLowerCase().includes(k)) > -1)) {
+              data.push({
+                exchange,
+                title,
+                url: `${url}${object.getAttribute('href')}`,
+              });
+            }
+          } catch (error) {}
+          break;
+        case 'huobi':
+          try {
+            const object = html.querySelector('.list-field1');
+            const title = object.textContent?.split('\n').join('').trim();
+            data.push({
+              exchange,
+              title,
+              url: `${url}${object.getAttribute('href')}`,
+            });
+          } catch (error) {}
+          break;
+        case 'kucoin':
+          try {
+            const object = html.querySelector('item');
+            let title = object.querySelector('title')?.textContent;
+            const prefix = '<![CDATA[', postfix = ']]>';
+            title = (title ? title.startsWith(prefix) && title.endsWith(postfix) ? title.substring(prefix.length, title.length - postfix.length) : title : '').trim();
+            if (title && (!keywords || keywords.length < 1 || keywords.findIndex(k => title.toLowerCase().includes(k)) > -1)) {
+              data.push({
+                exchange,
+                title,
+                url: object.querySelector('guid')?.textContent,
+              });
+            }
+          } catch (error) {}
+          break;
+        case 'kraken':
+          try {
+            const object = html.querySelector('.entry-header').querySelector('h1').querySelector('a');
+            const title = object.textContent;
+            if (title && (!keywords || keywords.length < 1 || keywords.findIndex(k => title.toLowerCase().includes(k)) > -1)) {
+              data.push({
+                exchange,
+                title,
+                url: object.getAttribute('href'),
+              });
+            }
+          } catch (error) {}
+          break;
+        default:
+          break;
+      }
+    }
+  }
+  if (data.length > 0) {
+    const id = 'latest-exchanges-listing';
+    const response = await crud({
+      collection: 'tmp',
