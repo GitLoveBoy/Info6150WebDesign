@@ -1,4 +1,5 @@
 // import module for date time
 const moment = require('moment');
 
-const exchang
+const exchanges_listing = require('./exchanges-listing');
+const fear_a
