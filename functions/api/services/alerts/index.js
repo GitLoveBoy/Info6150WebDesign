@@ -2,4 +2,5 @@
 const moment = require('moment');
 
 const exchanges_listing = require('./exchanges-listing');
-const fear_a
+const fear_and_greed = require('./fear-and-greed');
+const ga
