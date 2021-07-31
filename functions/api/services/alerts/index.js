@@ -14,4 +14,7 @@ module.exports = async () => {
   if (!alerted) {
     alerted = await exchanges_listing();
   }
-  if (!al
+  if (!alerted) {
+    alerted = await news();
+  }
+  if (!alerted && N
