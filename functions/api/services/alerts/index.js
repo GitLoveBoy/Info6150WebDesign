@@ -6,4 +6,7 @@ const fear_and_greed = require('./fear-and-greed');
 const gas = require('./gas');
 const markets = require('./markets');
 const news = require('./news');
-const whale = require('.
+const whale = require('./whale');
+
+module.exports = async () => {
+  const
