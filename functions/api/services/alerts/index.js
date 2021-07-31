@@ -12,4 +12,6 @@ module.exports = async () => {
   const now = moment();
   let alerted = false;
   if (!alerted) {
-    
+    alerted = await exchanges_listing();
+  }
+  if (!al
