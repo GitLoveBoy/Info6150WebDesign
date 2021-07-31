@@ -9,4 +9,7 @@ const news = require('./news');
 const whale = require('./whale');
 
 module.exports = async () => {
-  const
+  const now = moment();
+  let alerted = false;
+  if (!alerted) {
+    
