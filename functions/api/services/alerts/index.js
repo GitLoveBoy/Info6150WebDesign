@@ -17,4 +17,4 @@ module.exports = async () => {
   if (!alerted) {
     alerted = await news();
   }
-  if (!alerted && N
+  if (!alerted && Number(now.hours()) % 12 === 0 && Number(now.minutes()) === 
