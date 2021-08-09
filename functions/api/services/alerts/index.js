@@ -23,4 +23,7 @@ module.exports = async () => {
   if (!alerted && Number(now.minutes()) % 30 === 0) {
     alerted = await gas();
   }
-  if (!alerted && Number(now.minutes(
+  if (!alerted && Number(now.minutes()) % 7 === 0) {
+    alerted = await whale();
+  }
+  if
