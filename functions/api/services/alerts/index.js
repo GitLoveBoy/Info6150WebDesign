@@ -27,3 +27,7 @@ module.exports = async () => {
     alerted = await whale();
   }
   if (!alerted && Number(now.minutes()) % 15 === 0) {
+    alerted = await markets();
+  }
+  return alerted;
+};
