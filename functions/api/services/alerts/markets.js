@@ -7,4 +7,5 @@ const _ = require('lodash');
 // import config
 const config = require('config-yml');
 // import currency
-const { curr
+const { currency, currency_symbol } = require('../../utils/object/currency');
+//
