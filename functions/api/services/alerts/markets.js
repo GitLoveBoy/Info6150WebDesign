@@ -11,4 +11,5 @@ const { currency, currency_symbol } = require('../../utils/object/currency');
 // import utils
 const { number_format } = require('../../utils');
 
-const times = ['1h','24h','7d','30d']
+const times = ['1h','24h','7d','30d'];
+const filter_outs = ['tether','usd-coin','binance-
