@@ -9,4 +9,6 @@ const config = require('config-yml');
 // import currency
 const { currency, currency_symbol } = require('../../utils/object/currency');
 // import utils
-const { number_format } = require(
+const { number_format } = require('../../utils');
+
+const times = ['1h','24h','7d','30d']
