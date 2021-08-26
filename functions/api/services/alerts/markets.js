@@ -12,4 +12,4 @@ const { currency, currency_symbol } = require('../../utils/object/currency');
 const { number_format } = require('../../utils');
 
 const times = ['1h','24h','7d','30d'];
-const filter_outs = ['tether','usd-coin','binance-usd','dai','frax','true-usd','compound-usd-coin','paxos-standard','neutrino','huobi-btc','usdd','compound-ether','cdai','fei-usd','tether-eurt','flex-usd','
+const filter_outs = ['tether','usd-coin','binance-usd','dai','frax','true-usd','compound-usd-coin','paxos-standard','neutrino','huobi-btc','usdd','compound-ether','cdai','fei-usd','tether-eurt','flex-usd','alchemix-usd','gemini-dollar','husd','liquity-usd','iron
