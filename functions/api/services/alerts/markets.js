@@ -17,4 +17,5 @@ const filter_outs = ['tether','usd-coin','binance-usd','dai','frax','true-usd','
 module.exports = async () => {
   const now = moment();
   const { website } = { ...config };
-  const {
+  const { coinhippo } = { ...config?.api?.endpoints };
+  cons
