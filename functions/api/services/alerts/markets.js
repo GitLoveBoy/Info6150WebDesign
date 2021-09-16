@@ -22,4 +22,6 @@ module.exports = async () => {
   let alerted, res;
   res = await api.get('', {
     params: {
-      module: '
+      module: 'coingecko',
+      path: '/coins/markets',
+      vs_currency: curre
