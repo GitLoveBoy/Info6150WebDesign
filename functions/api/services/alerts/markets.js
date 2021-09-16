@@ -18,4 +18,5 @@ module.exports = async () => {
   const now = moment();
   const { website } = { ...config };
   const { coinhippo } = { ...config?.api?.endpoints };
-  cons
+  const api = axios.create({ baseURL: coinhippo });
+  let alert
