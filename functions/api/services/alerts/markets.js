@@ -19,4 +19,7 @@ module.exports = async () => {
   const { website } = { ...config };
   const { coinhippo } = { ...config?.api?.endpoints };
   const api = axios.create({ baseURL: coinhippo });
-  let alert
+  let alerted, res;
+  res = await api.get('', {
+    params: {
+      module: '
