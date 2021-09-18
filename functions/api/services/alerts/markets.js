@@ -29,4 +29,5 @@ module.exports = async () => {
       per_page: 250,
       price_change_percentage: times.join(','),
     },
-  }).catch
+  }).catch(error => { return { data: { error } }; });
+  co
