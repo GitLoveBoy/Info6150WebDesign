@@ -30,4 +30,4 @@ module.exports = async () => {
       price_change_percentage: times.join(','),
     },
   }).catch(error => { return { data: { error } }; });
-  co
+  const market_caps = res?.data && !res.data.error && res.data.filter(d
