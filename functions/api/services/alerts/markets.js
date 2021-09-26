@@ -39,4 +39,6 @@ module.exports = async () => {
       order: 'market_cap_desc',
       per_page: 250,
       price_change_percentage: times.join(','),
-      categ
+      category: 'decentralized-finance-defi',
+    },
+  }).catch(error => 
