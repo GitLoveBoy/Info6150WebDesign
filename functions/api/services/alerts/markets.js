@@ -38,4 +38,5 @@ module.exports = async () => {
       vs_currency: currency,
       order: 'market_cap_desc',
       per_page: 250,
-    
+      price_change_percentage: times.join(','),
+      categ
