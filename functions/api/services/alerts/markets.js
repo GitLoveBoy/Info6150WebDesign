@@ -42,4 +42,6 @@ module.exports = async () => {
       category: 'decentralized-finance-defi',
     },
   }).catch(error => { return { data: { error } }; });
-  const defis = res?.data && !res.data.error && res.data.filter(d => !filter_outs.includes(d?.id)
+  const defis = res?.data && !res.data.error && res.data.filter(d => !filter_outs.includes(d?.id));
+  res = await api.get('', {
+    params: {
