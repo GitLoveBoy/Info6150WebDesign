@@ -41,4 +41,5 @@ module.exports = async () => {
       price_change_percentage: times.join(','),
       category: 'decentralized-finance-defi',
     },
-  }).catch(error => 
+  }).catch(error => { return { data: { error } }; });
+  const defis = res?.data && !res
