@@ -53,4 +53,5 @@ module.exports = async () => {
       price_change_percentage: times.join(','),
       category: 'non-fungible-tokens-nft',
     },
-  }).catch(error => { return { data: { error } 
+  }).catch(error => { return { data: { error } }; });
+  const nfts = res?.data && !res.data.erro
