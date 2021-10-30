@@ -54,4 +54,5 @@ module.exports = async () => {
       category: 'non-fungible-tokens-nft',
     },
   }).catch(error => { return { data: { error } }; });
-  const nfts = res?.data && !res.data.erro
+  const nfts = res?.data && !res.data.error && res.data.filter(d => !filter_outs.includes(d?.id));
+  res
