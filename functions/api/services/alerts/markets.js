@@ -58,3 +58,6 @@ module.exports = async () => {
   res = await api.get('', {
     params: {
       module: 'coingecko',
+      path: '/search/trending',
+    },
+  }).catch(error => { 
