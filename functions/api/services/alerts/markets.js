@@ -60,4 +60,5 @@ module.exports = async () => {
       module: 'coingecko',
       path: '/search/trending',
     },
-  }).catch(error => { 
+  }).catch(error => { return { data: { error } }; });
+  let trendings = res?
