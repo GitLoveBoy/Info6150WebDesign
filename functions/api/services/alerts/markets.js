@@ -61,4 +61,5 @@ module.exports = async () => {
       path: '/search/trending',
     },
   }).catch(error => { return { data: { error } }; });
-  let trendings = res?
+  let trendings = res?.data && !res.data.error && res.data.coins;
+  if (trending
