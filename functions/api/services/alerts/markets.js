@@ -62,4 +62,6 @@ module.exports = async () => {
     },
   }).catch(error => { return { data: { error } }; });
   let trendings = res?.data && !res.data.error && res.data.coins;
-  if (trending
+  if (trendings?.length > 0) {
+    res = await api.get('', {
+      
