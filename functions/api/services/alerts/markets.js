@@ -66,4 +66,6 @@ module.exports = async () => {
     res = await api.get('', {
       params: {
         module: 'coingecko',
-        path:
+        path: '/coins/markets',
+        vs_currency: currency,
+    
