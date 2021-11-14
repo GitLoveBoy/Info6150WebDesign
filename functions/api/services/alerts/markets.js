@@ -68,4 +68,5 @@ module.exports = async () => {
         module: 'coingecko',
         path: '/coins/markets',
         vs_currency: currency,
-    
+        order: 'market_cap_desc',
+        per_page:
