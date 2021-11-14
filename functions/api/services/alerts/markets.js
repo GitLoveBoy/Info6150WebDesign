@@ -64,4 +64,6 @@ module.exports = async () => {
   let trendings = res?.data && !res.data.error && res.data.coins;
   if (trendings?.length > 0) {
     res = await api.get('', {
-      
+      params: {
+        module: 'coingecko',
+        path:
