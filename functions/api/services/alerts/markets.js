@@ -72,4 +72,5 @@ module.exports = async () => {
         per_page: 250,
         price_change_percentage: times.join(','),
         ids: trendings.map(c => c?.item?.id).join(','),
-    
+      },
+    }).catch(error => { return { data: { error } }; });
