@@ -74,3 +74,4 @@ module.exports = async () => {
         ids: trendings.map(c => c?.item?.id).join(','),
       },
     }).catch(error => { return { data: { error } }; });
+    trendings = res?.data && !res.data.error ? trendi
