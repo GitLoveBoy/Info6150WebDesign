@@ -76,4 +76,6 @@ module.exports = async () => {
     }).catch(error => { return { data: { error } }; });
     trendings = res?.data && !res.data.error ? trendings.map((t, i) => {
       return {
-        ...t
+        ...t?.item,
+        image: t?.thumb,
+        rank: i + 1
