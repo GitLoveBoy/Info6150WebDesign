@@ -80,4 +80,8 @@ module.exports = async () => {
         image: t?.thumb,
         rank: i + 1,
         ...res.data.find(d => d?.id === t?.id),
-      }
+      };
+    }) : trendings;
+  }
+
+  const top_gainers = _.orderBy(market
