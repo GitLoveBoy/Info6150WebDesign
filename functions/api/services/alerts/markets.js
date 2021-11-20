@@ -78,4 +78,6 @@ module.exports = async () => {
       return {
         ...t?.item,
         image: t?.thumb,
-        rank: i + 1
+        rank: i + 1,
+        ...res.data.find(d => d?.id === t?.id),
+      }
