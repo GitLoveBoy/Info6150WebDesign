@@ -84,4 +84,5 @@ module.exports = async () => {
     }) : trendings;
   }
 
-  const top_gainers = _.orderBy(market_caps || [], ['price_change_percentage_24h_in_currency'],
+  const top_gainers = _.orderBy(market_caps || [], ['price_change_percentage_24h_in_currency'], ['desc']);
+  const top_losers = _.orderBy(m
