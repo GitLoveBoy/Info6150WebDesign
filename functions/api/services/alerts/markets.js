@@ -97,4 +97,5 @@ module.exports = async () => {
       d.volume_per_market_cap = d.total_volume / d.market_cap;
     });
     return d;
-  }) || [], ['vol
+  }) || [], ['volume_per_market_cap'], ['desc']);
+  const _defis =
