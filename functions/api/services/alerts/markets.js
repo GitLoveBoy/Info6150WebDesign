@@ -94,4 +94,7 @@ module.exports = async () => {
   }) || [], ['price_change_percentage_24h_in_currency_abs', 'price_change_percentage_1h_in_currency_abs'], ['desc', 'desc']);
   const volume_per_market_caps = _.orderBy(market_caps?.filter(d => d?.total_volume && d.market_cap).map(d => {
     times.forEach(t => {
-      d.volume_per_market_cap = d.total
+      d.volume_per_market_cap = d.total_volume / d.market_cap;
+    });
+    return d;
+  }) || [], ['vol
