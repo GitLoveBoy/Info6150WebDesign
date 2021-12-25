@@ -100,4 +100,7 @@ module.exports = async () => {
   }) || [], ['volume_per_market_cap'], ['desc']);
   const _defis = _.orderBy(defis?.map(d => {
     times.forEach(t => {
-      d[`price_change_percentage_${t}_in_currency_abs`] = Math.abs(d[`price_change_percentage_${t}_in_currency`])
+      d[`price_change_percentage_${t}_in_currency_abs`] = Math.abs(d[`price_change_percentage_${t}_in_currency`]);
+    });
+    return d;
+  }) || [], ['market_cap_rank', 'price_ch
