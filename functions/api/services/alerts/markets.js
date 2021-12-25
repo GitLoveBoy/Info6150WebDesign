@@ -99,4 +99,5 @@ module.exports = async () => {
     return d;
   }) || [], ['volume_per_market_cap'], ['desc']);
   const _defis = _.orderBy(defis?.map(d => {
-    times.forEach(t => 
+    times.forEach(t => {
+      d[`price_change_percentage_${t}_in_currency_abs`
