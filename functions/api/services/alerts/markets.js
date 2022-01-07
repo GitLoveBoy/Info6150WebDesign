@@ -109,4 +109,4 @@ module.exports = async () => {
       d[`price_change_percentage_${t}_in_currency_abs`] = Math.abs(d[`price_change_percentage_${t}_in_currency`]);
     });
     return d;
-  }) || [], ['market_cap_rank', 'p
+  }) || [], ['market_cap_rank', 'price_change_percentage_24h_in_currency_abs', 'price
