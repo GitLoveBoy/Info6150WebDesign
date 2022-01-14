@@ -112,4 +112,4 @@ module.exports = async () => {
   }) || [], ['market_cap_rank', 'price_change_percentage_24h_in_currency_abs', 'price_change_percentage_1h_in_currency_abs'], ['asc', 'desc', 'desc']);
   const _trendings = _.orderBy(trendings?.filter(d => typeof d?.current_price === 'number').map(d => {
     times.forEach(t => {
-      d[`price_change_percen
+      d[`price_change_percentage_${t}_in_currency_abs`] = Math.abs(d[`price_change_percen
