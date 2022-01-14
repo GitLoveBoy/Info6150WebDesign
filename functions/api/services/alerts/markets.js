@@ -110,4 +110,4 @@ module.exports = async () => {
     });
     return d;
   }) || [], ['market_cap_rank', 'price_change_percentage_24h_in_currency_abs', 'price_change_percentage_1h_in_currency_abs'], ['asc', 'desc', 'desc']);
-  const _trendings = _.orderBy(trendings?.filter(d =>
+  const _trendings = _.orderBy(trendings?.filter(d => typeof d?.current_price === 'number').map(d 
