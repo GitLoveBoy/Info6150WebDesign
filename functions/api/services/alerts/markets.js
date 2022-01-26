@@ -115,4 +115,5 @@ module.exports = async () => {
       d[`price_change_percentage_${t}_in_currency_abs`] = Math.abs(d[`price_change_percentage_${t}_in_currency`]);
     });
     return d;
-  }) || [], ['rank', 'price_change_percentage_24h_in_currency_abs', 'price_change_percentage_1h_in_currency_abs'], ['asc', 'de
+  }) || [], ['rank', 'price_change_percentage_24h_in_currency_abs', 'price_change_percentage_1h_in_currency_abs'], ['asc', 'desc', 'desc']);
+  const aths = _market_caps.filter(d => now.diff(moment(d?.ath
