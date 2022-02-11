@@ -116,4 +116,5 @@ module.exports = async () => {
     });
     return d;
   }) || [], ['rank', 'price_change_percentage_24h_in_currency_abs', 'price_change_percentage_1h_in_currency_abs'], ['asc', 'desc', 'desc']);
-  const aths = _market_caps.filter(d => now.diff(moment(d?.ath
+  const aths = _market_caps.filter(d => now.diff(moment(d?.ath_date), 'hours', true) <= 1);
+  const atls = _m
