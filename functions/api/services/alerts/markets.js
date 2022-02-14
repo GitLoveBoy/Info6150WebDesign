@@ -122,4 +122,6 @@ module.exports = async () => {
   const twitter = [], telegram = [];
   if (Number(now.minutes()) === 0) {
     if (Number(now.hours()) % 4 === 0) {
-      const data = market_caps.fi
+      const data = market_caps.find(d => d.id === 'bitcoin');
+      if (data) {
+        const 
