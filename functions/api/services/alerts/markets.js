@@ -121,4 +121,5 @@ module.exports = async () => {
 
   const twitter = [], telegram = [];
   if (Number(now.minutes()) === 0) {
-    if (Number(no
+    if (Number(now.hours()) % 4 === 0) {
+      const data = market_caps.fi
