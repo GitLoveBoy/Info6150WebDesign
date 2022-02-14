@@ -120,4 +120,5 @@ module.exports = async () => {
   const atls = _market_caps.filter(d => now.diff(moment(d?.atl_date), 'hours', true) <= 1);
 
   const twitter = [], telegram = [];
-  if 
+  if (Number(now.minutes()) === 0) {
+    if (Number(no
