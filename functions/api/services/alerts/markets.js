@@ -124,4 +124,5 @@ module.exports = async () => {
     if (Number(now.hours()) % 4 === 0) {
       const data = market_caps.find(d => d.id === 'bitcoin');
       if (data) {
-        const { id, symbol, name, current_price, price_change_pe
+        const { id, symbol, name, current_price, price_change_percentage_24h_in_currency } = { ...data };
+        twitter
