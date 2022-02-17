@@ -125,4 +125,4 @@ module.exports = async () => {
       const data = market_caps.find(d => d.id === 'bitcoin');
       if (data) {
         const { id, symbol, name, current_price, price_change_percentage_24h_in_currency } = { ...data };
-        twitter.push(`Today's 👑🟠 #${name} price is ${currency_symbol}${nu
+        twitter.push(`Today's 👑🟠 #${name} price is ${currency_symbol}${number_format(current_price, `0,0${current_price >= 100 ? '' : current_price >
