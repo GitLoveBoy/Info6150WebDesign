@@ -126,4 +126,4 @@ module.exports = async () => {
       if (data) {
         const { id, symbol, name, current_price, price_change_percentage_24h_in_currency } = { ...data };
         twitter.push(`Today's 👑🟠 #${name} price is ${currency_symbol}${number_format(current_price, `0,0${current_price >= 100 ? '' : current_price >= 1 ? '.00' : '.00000000'}`)} ${number_format(price_change_percentage_24h_in_currency / 100, '+0,0.00%')} from yesterday.\n${website}/token/${id}\n\n$${symbol?.toUpperCase()} #Cryptocurrency`);
-        telegram.push(`Today's 👑🟠 <a href="${website}/token/${id}">${symbol ? symbol.to
+        telegram.push(`Today's 👑🟠 <a href="${website}/token/${id}">${symbol ? symbol.toUpperCase() : name}</a> price <b>${currency_symbol}${numbe
