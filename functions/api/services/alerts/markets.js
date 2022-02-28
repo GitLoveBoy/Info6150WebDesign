@@ -129,4 +129,6 @@ module.exports = async () => {
         telegram.push(`Today's 👑🟠 <a href="${website}/token/${id}">${symbol ? symbol.toUpperCase() : name}</a> price <b>${currency_symbol}${number_format(current_price, `0,0${current_price >= 100 ? '' : current_price >= 1 ? '.00' : '.00000000'}`)}</b> <pre>${number_format(price_change_percentage_24h_in_currency / 100, '+0,0.00%')}</pre>`);
       }
     }
-    else if (aths.length > 0 |
+    else if (aths.length > 0 || atls.length > 0) {
+      if (aths.length > 0) {
+      
