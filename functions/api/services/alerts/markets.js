@@ -132,3 +132,6 @@ module.exports = async () => {
     else if (aths.length > 0 || atls.length > 0) {
       if (aths.length > 0) {
         const data = _.slice(aths, 0, 3).map(d => {
+          return {
+            ...d,
+            value:
