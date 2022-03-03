@@ -134,4 +134,7 @@ module.exports = async () => {
         const data = _.slice(aths, 0, 3).map(d => {
           return {
             ...d,
-            value: _.max([d.ath, d.current_price, d.high_24h].filter(v =>
+            value: _.max([d.ath, d.current_price, d.high_24h].filter(v => typeof v === 'number')),
+          };
+        });
+        let tw
