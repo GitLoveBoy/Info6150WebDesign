@@ -138,4 +138,5 @@ module.exports = async () => {
           };
         });
         let twitter_message = '', telegram_message = '';
-        data
+        data.forEach((d, i) => {
+          const { id, symbol, n
