@@ -137,4 +137,5 @@ module.exports = async () => {
             value: _.max([d.ath, d.current_price, d.high_24h].filter(v => typeof v === 'number')),
           };
         });
-        let tw
+        let twitter_message = '', telegram_message = '';
+        data
