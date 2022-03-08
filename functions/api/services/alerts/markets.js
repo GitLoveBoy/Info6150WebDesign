@@ -140,4 +140,4 @@ module.exports = async () => {
         let twitter_message = '', telegram_message = '';
         data.forEach((d, i) => {
           const { id, symbol, name, value } = { ...d };
-          twitter_message += `${i > 0 ? '\n' : ''}${symbol ? `$${symbol.toUpperCase()}` : name} hits 
+          twitter_message += `${i > 0 ? '\n' : ''}${symbol ? `$${symbol.toUpperCase()}` : name} hits a new ATH at ${currency_symbol}${number_format(valu
