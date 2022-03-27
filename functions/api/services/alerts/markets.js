@@ -142,4 +142,6 @@ module.exports = async () => {
           const { id, symbol, name, value } = { ...d };
           twitter_message += `${i > 0 ? '\n' : ''}${symbol ? `$${symbol.toUpperCase()}` : name} hits a new ATH at ${currency_symbol}${number_format(value, `0,0${value >= 100 ? '' : value >= 1 ? '.00' : '.00000000'}`)}. 🚀🌙`;
           telegram_message += `${i === 0 ? '🛸🌙 ALL TIME HIGH' : ''}\n`;
-          telegram_message += `<a href="${website}/token/${id}">${symbol ? symbol.toUpperCase() : name}</a> <pre>${currency_symbol}${number_format(value, `0,0${value >= 100 ? '' : value >= 1 ? '
+          telegram_message += `<a href="${website}/token/${id}">${symbol ? symbol.toUpperCase() : name}</a> <pre>${currency_symbol}${number_format(value, `0,0${value >= 100 ? '' : value >= 1 ? '.00' : '.00000000'}`)}</pre>`;
+        });
+    
