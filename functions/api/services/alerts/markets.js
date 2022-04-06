@@ -150,4 +150,7 @@ module.exports = async () => {
         telegram.push(telegram_message);
       }
       else {
-        const data = _.slice(atls, 0, 3).map(d =>
+        const data = _.slice(atls, 0, 3).map(d => {
+          return {
+            ...d,
+    
