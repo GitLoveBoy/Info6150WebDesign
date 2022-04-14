@@ -153,4 +153,4 @@ module.exports = async () => {
         const data = _.slice(atls, 0, 3).map(d => {
           return {
             ...d,
-    
+            value: _.max([d.atl, d.current_price, d.low_24h]
