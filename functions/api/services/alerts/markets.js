@@ -154,4 +154,6 @@ module.exports = async () => {
           return {
             ...d,
             value: _.max([d.atl, d.current_price, d.low_24h].filter(v => typeof v === 'number')),
-         
+          };
+        });
+        let twitter_message = '', telegr
