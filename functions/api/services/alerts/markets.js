@@ -159,4 +159,4 @@ module.exports = async () => {
         let twitter_message = '', telegram_message = '';
         data.forEach((d, i) => {
           const { id, symbol, name, value } = { ...d };
-          twitter_messa
+          twitter_message += `${i > 0 ? '\n' : ''}${symbol ? `$${symbol.toU
