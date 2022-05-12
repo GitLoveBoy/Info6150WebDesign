@@ -164,4 +164,4 @@ module.exports = async () => {
           telegram_message += `<a href="${website}/token/${id}">${symbol ? symbol.toUpperCase() : name}</a> <pre>${currency_symbol}${number_format(value, `0,0${value >= 100 ? '' : value >= 1 ? '.00' : '.00000000'}`)}</pre>`;
         });
         twitter_message += data.length === 1 ? data.map(d => `\n${website}/token/${d.id}`) : '';
-        twitter_message += `\n\n${data.map(d => `${d.name ? `#${d.name.spli
+        twitter_message += `\n\n${data.map(d => `${d.name ? `#${d.name.split(' ').filter(c => c).join('')}` : ''}`).join(' ')}
