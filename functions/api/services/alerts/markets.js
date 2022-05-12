@@ -166,4 +166,7 @@ module.exports = async () => {
         twitter_message += data.length === 1 ? data.map(d => `\n${website}/token/${d.id}`) : '';
         twitter_message += `\n\n${data.map(d => `${d.name ? `#${d.name.split(' ').filter(c => c).join('')}` : ''}`).join(' ')} #Cryptocurrency`;
         twitter.push(twitter_message);
-   
+        telegram.push(telegram_message);
+      }
+    }
+    
