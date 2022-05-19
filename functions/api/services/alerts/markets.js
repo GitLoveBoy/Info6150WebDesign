@@ -169,4 +169,5 @@ module.exports = async () => {
         telegram.push(telegram_message);
       }
     }
-    
+    else {
+      const i = Math.floor(Math.ran
