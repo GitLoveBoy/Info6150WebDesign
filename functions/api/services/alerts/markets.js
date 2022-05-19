@@ -170,4 +170,6 @@ module.exports = async () => {
       }
     }
     else {
-      const i = Math.floor(Math.ran
+      const i = Math.floor(Math.random() * 7);
+      if (i < 1) {
+        const data = _.slice(_market_c
