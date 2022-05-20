@@ -174,4 +174,5 @@ module.exports = async () => {
       if (i < 1) {
         const data = _.slice(_market_caps.filter(d => d.price_change_percentage_24h_in_currency_abs >= 5), 0, 3);
         if (data.length > 0) {
-          let tw
+          let twitter_message = '', telegram_message = '';
+          data.for
