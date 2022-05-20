@@ -172,4 +172,4 @@ module.exports = async () => {
     else {
       const i = Math.floor(Math.random() * 7);
       if (i < 1) {
-        const data = _.slice(_market_c
+        const data = _.slice(_market_caps.filter(d => d.price_change_percentage_24h_in_currency_abs >= 
