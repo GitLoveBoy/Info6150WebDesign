@@ -180,4 +180,5 @@ module.exports = async () => {
             twitter_message += `${i === 0 ? `Let's check on the Top${data.length > 1 ? ` ${data.length}` : ''} % Changes 🌪` : ''}\n`;
             twitter_message += `${symbol ? `$${symbol.toUpperCase()}` : name} ${currency_symbol}${number_format(current_price, `0,0${current_price >= 100 ? '' : current_price >= 1 ? '.00' : '.00000000'}`)} ${number_format(price_change_percentage_24h_in_currency / 100, '+0,0.00%')}`;
             telegram_message += `${i === 0 ? `<a href="${website}/tokens">🌪 High % Change</a>` : ''}\n`;
-            telegram_message += `<a href="${website}/token/${id}">${symbol ? symbol.toUpperCase() : name}</a> <b>${currency_symbol}${number_format(current_price, `0,0${current_price >= 100 ? '' : current_price >= 1 ? '.00' : '.00000000'}`)}</b> <pre>${number_format(price_change_percentag
+            telegram_message += `<a href="${website}/token/${id}">${symbol ? symbol.toUpperCase() : name}</a> <b>${currency_symbol}${number_format(current_price, `0,0${current_price >= 100 ? '' : current_price >= 1 ? '.00' : '.00000000'}`)}</b> <pre>${number_format(price_change_percentage_24h_in_currency / 100, '+0,0.00%')}</pre>`;
+        
