@@ -188,4 +188,5 @@ module.exports = async () => {
           telegram.push(telegram_message);
         }
        }
-      else if (
+      else if (i < 2) {
+        const data = _.slice(vol
