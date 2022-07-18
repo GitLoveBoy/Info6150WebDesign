@@ -191,3 +191,4 @@ module.exports = async () => {
       else if (i < 2) {
         const data = _.slice(volume_per_market_caps, 0, 3);
         if (data.length > 0) {
+          let twitter_message = '', telegram_m
