@@ -193,4 +193,5 @@ module.exports = async () => {
         if (data.length > 0) {
           let twitter_message = '', telegram_message = '';
           data.forEach((d, i) => {
-            const { id, symbol, name, current_price, price_change_percent
+            const { id, symbol, name, current_price, price_change_percentage_24h_in_currency, volume_per_market_cap } = { ...d };
+        
