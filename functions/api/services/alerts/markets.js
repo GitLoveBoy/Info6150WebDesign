@@ -195,4 +195,4 @@ module.exports = async () => {
           data.forEach((d, i) => {
             const { id, symbol, name, current_price, price_change_percentage_24h_in_currency, volume_per_market_cap } = { ...d };
             twitter_message += `${i === 0 ? `Let's check on the Top${data.length > 1 ? ` ${data.length}` : ''} Volume / Market Cap 🌊` : ''}\n`;
-            twitter_message += `${symbol ? `$${symbol.toUpperCase()}` : name} ${currency_s
+            twitter_message += `${symbol ? `$${symbol.toUpperCase()}` : name} ${currency_symbol}${number_format(current_price, `0,0${current_pri
