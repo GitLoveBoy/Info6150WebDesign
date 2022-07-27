@@ -205,4 +205,5 @@ module.exports = async () => {
           telegram.push(telegram_message);
         }
       }
-      else
+      else if (i < 3) {
+        const data = _.slice(top_ga
