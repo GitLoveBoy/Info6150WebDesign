@@ -222,4 +222,5 @@ module.exports = async () => {
           telegram.push(telegram_message);
         }
       }
-      else if (i 
+      else if (i < 4) {
+        const data = _.slice(top_losers
