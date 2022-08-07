@@ -226,4 +226,5 @@ module.exports = async () => {
         const data = _.slice(top_losers, 0, 3);
         if (data.length > 0) {
           let twitter_message = '', telegram_message = '';
-          data.forEa
+          data.forEach((d, i) => {
+            const { id, symbol, name, c
