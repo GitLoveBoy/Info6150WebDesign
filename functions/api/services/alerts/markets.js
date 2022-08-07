@@ -225,4 +225,5 @@ module.exports = async () => {
       else if (i < 4) {
         const data = _.slice(top_losers, 0, 3);
         if (data.length > 0) {
-          let twitter_mess
+          let twitter_message = '', telegram_message = '';
+          data.forEa
