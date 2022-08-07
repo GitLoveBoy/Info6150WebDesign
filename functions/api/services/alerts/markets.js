@@ -227,4 +227,4 @@ module.exports = async () => {
         if (data.length > 0) {
           let twitter_message = '', telegram_message = '';
           data.forEach((d, i) => {
-            const { id, symbol, name, c
+            const { id, symbol, name, current_price, price_change_percentage_24h_in_currenc
