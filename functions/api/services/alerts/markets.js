@@ -230,4 +230,5 @@ module.exports = async () => {
             const { id, symbol, name, current_price, price_change_percentage_24h_in_currency } = { ...d };
             twitter_message += `${i === 0 ? `Today's Top Losers ⚰️` : ''}\n`;
             twitter_message += `${symbol ? `$${symbol.toUpperCase()}` : name} ${currency_symbol}${number_format(current_price, `0,0${current_price >= 100 ? '' : current_price >= 1 ? '.00' : '.00000000'}`)} ${number_format(price_change_percentage_24h_in_currency / 100, '+0,0.00%')}`;
-            telegram_message += `${i === 0 ? `<a href="${website}">⚰️ Top Losers</a
+            telegram_message += `${i === 0 ? `<a href="${website}">⚰️ Top Losers</a>` : ''}\n`;
+            telegram_message += `<a href="${websit
