@@ -242,4 +242,6 @@ module.exports = async () => {
       else if (i < 5) {
         const data = _.slice(_defis, 0, 3);
         if (data.length > 0) {
-          let twitter_message = '', telegram_mes
+          let twitter_message = '', telegram_message = '';
+          data.forEach((d, i) => {
+            c
