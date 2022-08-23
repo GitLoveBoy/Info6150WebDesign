@@ -253,4 +253,7 @@ module.exports = async () => {
           twitter_message += data.length === 1 ? data.map(d => `\n${website}/token/${d.id}`) : `\n${website}/tokens/decentralized-finance-defi`;
           twitter_message += `\n\n#DeFi ${data.map(d => `${d.name ? `#${d.name.split(' ').filter(c => c).join('')}` : ''}`).join(' ')} `;
           twitter.push(twitter_message);
-          telegram.
+          telegram.push(telegram_message);
+        }
+      }
+      else if (i < 6)
