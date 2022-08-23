@@ -256,4 +256,6 @@ module.exports = async () => {
           telegram.push(telegram_message);
         }
       }
-      else if (i < 6)
+      else if (i < 6) {
+        const data = _.slice(_nfts, 0, 3);
+        if (data
