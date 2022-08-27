@@ -263,4 +263,5 @@ module.exports = async () => {
           data.forEach((d, i) => {
             const { id, symbol, name, current_price, price_change_percentage_24h_in_currency } = { ...d };
             twitter_message += `${i === 0 ? `🎮🏞👻 Update on the Top${data.length > 1 ? ` ${data.length}` : ''} NFTs` : ''}\n`;
-            twitter_message += `${symbol ? `$${symbol.toUpperCase()}` : name} ${currency_symbol}${number_format(current_price, `0,0${current_price >= 100 ? '' : current_price >= 1 ? '.00' : '.00000000'}`)} ${number_format(price_chang
+            twitter_message += `${symbol ? `$${symbol.toUpperCase()}` : name} ${currency_symbol}${number_format(current_price, `0,0${current_price >= 100 ? '' : current_price >= 1 ? '.00' : '.00000000'}`)} ${number_format(price_change_percentage_24h_in_currency / 100, '+0,0.00%')}`;
+    
