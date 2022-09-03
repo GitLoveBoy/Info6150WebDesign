@@ -276,4 +276,5 @@ module.exports = async () => {
       else {
         const data = _.slice(_trendings, 0, 5);
         if (data.length > 0) {
-          let twitter_message
+          let twitter_message = '', telegram_message = '';
+          data.forEach((
