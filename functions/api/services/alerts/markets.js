@@ -287,4 +287,7 @@ module.exports = async () => {
           twitter_message += data.length === 1 ? data.map(d => `\n${website}/token/${d.id}`) : `\n${website}/tokens`;
           twitter_message += `\n\n${data.map(d => `${d.name ? `#${d.name.split(' ').filter(c => c).join('')}` : ''}`).join(' ')} `;
           twitter.push(twitter_message);
-         
+          telegram.push(telegram_message);
+        }
+      }
+ 
