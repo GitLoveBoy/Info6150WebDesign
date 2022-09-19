@@ -290,4 +290,7 @@ module.exports = async () => {
           telegram.push(telegram_message);
         }
       }
- 
+    }
+  }
+  else {
+    const data = _.slice(market_caps, 0,
