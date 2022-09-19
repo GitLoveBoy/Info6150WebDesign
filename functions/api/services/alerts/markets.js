@@ -293,4 +293,5 @@ module.exports = async () => {
     }
   }
   else {
-    const data = _.slice(market_caps, 0,
+    const data = _.slice(market_caps, 0, 3).map(d => {
+      d.hour_market_cap_change = d.price
