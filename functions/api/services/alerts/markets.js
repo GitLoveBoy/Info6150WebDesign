@@ -295,4 +295,7 @@ module.exports = async () => {
   else {
     const data = _.slice(market_caps, 0, 3).map(d => {
       d.hour_market_cap_change = d.price_change_percentage_1h_in_currency * d.market_cap;
-      d.day_market_cap_change = d.price_change_percentage_24h_i
+      d.day_market_cap_change = d.price_change_percentage_24h_in_currency * d.market_cap;
+      return d;
+    });
+    const to
