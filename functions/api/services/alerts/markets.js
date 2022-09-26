@@ -298,4 +298,5 @@ module.exports = async () => {
       d.day_market_cap_change = d.price_change_percentage_24h_in_currency * d.market_cap;
       return d;
     });
-    const to
+    const total_market_cap = _.sumBy(data, 'market_cap');
+    if
