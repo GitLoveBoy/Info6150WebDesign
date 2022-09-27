@@ -300,4 +300,4 @@ module.exports = async () => {
     });
     const total_market_cap = _.sumBy(data, 'market_cap');
     if (total_market_cap > 0) {
-      const sum_hour_market_cap_c
+      const sum_hour_market_cap_change = _.sumBy(data, 'hour_market_cap_ch
