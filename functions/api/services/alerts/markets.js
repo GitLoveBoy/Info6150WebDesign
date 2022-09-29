@@ -302,4 +302,5 @@ module.exports = async () => {
     if (total_market_cap > 0) {
       const sum_hour_market_cap_change = _.sumBy(data, 'hour_market_cap_change');
       const sum_day_market_cap_change = _.sumBy(data, 'day_market_cap_change');
-      const hour_exceed = Math.abs(sum_hour_market_cap_change / tot
+      const hour_exceed = Math.abs(sum_hour_market_cap_change / total_market_cap) >= 5;
+      const day_exceed = Math.abs(sum_day_m
