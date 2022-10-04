@@ -305,4 +305,4 @@ module.exports = async () => {
       const hour_exceed = Math.abs(sum_hour_market_cap_change / total_market_cap) >= 5;
       const day_exceed = Math.abs(sum_day_market_cap_change / total_market_cap) >= 10;
       if (hour_exceed || day_exceed) {
-        const status = (hour_exceed ? sum_hour_market_cap_change :
+        const status = (hour_exceed ? sum_hour_market_cap_change : sum_day_market_cap_change) < 0 ? 'panic' : 'fomo';
