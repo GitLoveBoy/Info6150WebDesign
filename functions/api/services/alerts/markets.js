@@ -306,4 +306,6 @@ module.exports = async () => {
       const day_exceed = Math.abs(sum_day_market_cap_change / total_market_cap) >= 10;
       if (hour_exceed || day_exceed) {
         const status = (hour_exceed ? sum_hour_market_cap_change : sum_day_market_cap_change) < 0 ? 'panic' : 'fomo';
-        let twitter_message = '', telegram_mes
+        let twitter_message = '', telegram_message = '';
+        data.forEach((d, i) => {
+          const { i
