@@ -308,4 +308,4 @@ module.exports = async () => {
         const status = (hour_exceed ? sum_hour_market_cap_change : sum_day_market_cap_change) < 0 ? 'panic' : 'fomo';
         let twitter_message = '', telegram_message = '';
         data.forEach((d, i) => {
-          const { i
+          const { id, symbol, name, current_price, price_change_percent
