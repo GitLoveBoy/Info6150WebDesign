@@ -310,4 +310,4 @@ module.exports = async () => {
         data.forEach((d, i) => {
           const { id, symbol, name, current_price, price_change_percentage_24h_in_currency } = { ...d };
           twitter_message += `${i === 0 ? `${status === 'panic' ? '😱🥶😰 Some Panic selling detected:' : '🤩🤑😁 Some FOMO buying detected:'}` : ''}\n`;
-          twitter_message += `${symbo
+          twitter_message += `${symbol ? `$${symbol.toUpperCase()}` : name} ${currency_symbol}${number_format(curre
