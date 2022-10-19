@@ -312,3 +312,4 @@ module.exports = async () => {
           twitter_message += `${i === 0 ? `${status === 'panic' ? '😱🥶😰 Some Panic selling detected:' : '🤩🤑😁 Some FOMO buying detected:'}` : ''}\n`;
           twitter_message += `${symbol ? `$${symbol.toUpperCase()}` : name} ${currency_symbol}${number_format(current_price, `0,0${current_price >= 100 ? '' : current_price >= 1 ? '.00' : '.00000000'}`)} ${number_format(price_change_percentage_24h_in_currency / 100, '+0,0.00%')}`;
           telegram_message += `${i === 0 ? `<a href="${website}">${status === 'panic' ? '😱🥶😰 Panic Selling' : '🤩🤑😁 FOMO Buying'}</a>` : ''}\n`;
+          telegram_message += `<a href="${website}/tok
