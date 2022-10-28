@@ -322,4 +322,6 @@ module.exports = async () => {
     }
   }
 
-  if (twitter.length > 0 || telegram.le
+  if (twitter.length > 0 || telegram.length > 0) {
+    alerted = true;
+    const { socials } = { ..
