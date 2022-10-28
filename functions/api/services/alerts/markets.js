@@ -324,4 +324,6 @@ module.exports = async () => {
 
   if (twitter.length > 0 || telegram.length > 0) {
     alerted = true;
-    const { socials } = { ..
+    const { socials } = { ...config };
+    await api.post('', {
+      module: '
