@@ -326,4 +326,7 @@ module.exports = async () => {
     alerted = true;
     const { socials } = { ...config };
     await api.post('', {
-      module: '
+      module: 'broadcast',
+      twitter: {
+        messages: twitter,
+        key: socials
