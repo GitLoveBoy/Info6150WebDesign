@@ -329,4 +329,7 @@ module.exports = async () => {
       module: 'broadcast',
       twitter: {
         messages: twitter,
-        key: socials
+        key: socials?.twitter?.api_key,
+      },
+      telegram: {
+    
