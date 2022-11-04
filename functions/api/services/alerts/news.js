@@ -3,4 +3,6 @@ const axios = require('axios');
 // import module for date time
 const moment = require('moment');
 // import lodash
-const 
+const _ = require('lodash');
+// import config
+const config 
