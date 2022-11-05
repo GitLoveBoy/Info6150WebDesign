@@ -5,4 +5,6 @@ const moment = require('moment');
 // import lodash
 const _ = require('lodash');
 // import config
-const config 
+const config = require('config-yml');
+// import index
+const { cru
