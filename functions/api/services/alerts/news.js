@@ -9,4 +9,6 @@ const config = require('config-yml');
 // import index
 const { crud } = require('../index');
 
-const filters = ['rising','hot','bullish
+const filters = ['rising','hot','bullish','bearish','important','lol'];
+
+module.exports = asy
