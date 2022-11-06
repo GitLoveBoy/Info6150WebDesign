@@ -7,4 +7,6 @@ const _ = require('lodash');
 // import config
 const config = require('config-yml');
 // import index
-const { cru
+const { crud } = require('../index');
+
+const filters = ['rising','hot','bullish
