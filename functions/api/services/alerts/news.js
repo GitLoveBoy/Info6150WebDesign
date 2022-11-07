@@ -11,4 +11,6 @@ const { crud } = require('../index');
 
 const filters = ['rising','hot','bullish','bearish','important','lol'];
 
-module.exports = asy
+module.exports = async () => {
+  const now = moment();
+  const { coinh
