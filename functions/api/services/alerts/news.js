@@ -14,4 +14,6 @@ const filters = ['rising','hot','bullish','bearish','important','lol'];
 module.exports = async () => {
   const now = moment();
   const { coinhippo } = { ...config?.api?.endpoints };
-  const api = axios.
+  const api = axios.create({ baseURL: coinhippo });
+  let alerted, data = [];
+  for (let 
