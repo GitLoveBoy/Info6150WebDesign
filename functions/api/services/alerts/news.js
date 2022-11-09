@@ -17,4 +17,6 @@ module.exports = async () => {
   const api = axios.create({ baseURL: coinhippo });
   let alerted, data = [];
   for (let i = 0; i < filters.length; i++) {
-    const fil
+    const filter = filters[i];
+    const res = await api.get('', {
+      params: 
