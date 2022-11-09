@@ -16,4 +16,5 @@ module.exports = async () => {
   const { coinhippo } = { ...config?.api?.endpoints };
   const api = axios.create({ baseURL: coinhippo });
   let alerted, data = [];
-  for (let 
+  for (let i = 0; i < filters.length; i++) {
+    const fil
