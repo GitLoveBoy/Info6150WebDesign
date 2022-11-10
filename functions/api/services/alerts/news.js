@@ -19,4 +19,7 @@ module.exports = async () => {
   for (let i = 0; i < filters.length; i++) {
     const filter = filters[i];
     const res = await api.get('', {
-      params: 
+      params: {
+        module: 'news',
+        public: true,
+  
