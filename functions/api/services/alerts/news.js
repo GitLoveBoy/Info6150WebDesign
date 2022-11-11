@@ -22,4 +22,7 @@ module.exports = async () => {
       params: {
         module: 'news',
         public: true,
-  
+        page: 1,
+        filter,
+      },
+    }).catch(erro
