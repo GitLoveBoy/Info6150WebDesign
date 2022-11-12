@@ -25,4 +25,5 @@ module.exports = async () => {
         page: 1,
         filter,
       },
-    }).catch(erro
+    }).catch(error => { return { data: { error } }; });
+    data = _.orderBy(_.
