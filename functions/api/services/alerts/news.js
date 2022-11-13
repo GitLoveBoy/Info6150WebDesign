@@ -26,4 +26,4 @@ module.exports = async () => {
         filter,
       },
     }).catch(error => { return { data: { error } }; });
-    data = _.orderBy(_.
+    data = _.orderBy(_.uniqBy(_.concat(data, res?.data?.results || []), 'id'), ['created_at
