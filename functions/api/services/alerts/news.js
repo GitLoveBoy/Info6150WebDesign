@@ -26,4 +26,7 @@ module.exports = async () => {
         filter,
       },
     }).catch(error => { return { data: { error } }; });
-    data = _.orderBy(_.uniqBy(_.concat(data, res?.data?.results || []), 'id'), ['created_at
+    data = _.orderBy(_.uniqBy(_.concat(data, res?.data?.results || []), 'id'), ['created_at'], ['desc']);
+  }
+  if (data.length > 0) {
+    cons
