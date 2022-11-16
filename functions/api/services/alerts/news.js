@@ -31,4 +31,8 @@ module.exports = async () => {
   if (data.length > 0) {
     const id = 'latest-news';
     const response = await crud({
-      collect
+      collection: 'tmp',
+      method: 'get',
+      id,
+    });
+    c
