@@ -29,4 +29,6 @@ module.exports = async () => {
     data = _.orderBy(_.uniqBy(_.concat(data, res?.data?.results || []), 'id'), ['created_at'], ['desc']);
   }
   if (data.length > 0) {
-    cons
+    const id = 'latest-news';
+    const response = await crud({
+      collect
