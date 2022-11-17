@@ -35,4 +35,5 @@ module.exports = async () => {
       method: 'get',
       id,
     });
-    c
+    const latest = { ...response };
+    data = data.filter
