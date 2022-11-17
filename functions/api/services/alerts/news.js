@@ -36,4 +36,4 @@ module.exports = async () => {
       id,
     });
     const latest = { ...response };
-    data = data.filter
+    data = data.filter(d => d.title && d.url && d.source && now.diff(moment(
