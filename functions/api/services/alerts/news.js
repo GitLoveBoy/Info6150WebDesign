@@ -37,4 +37,4 @@ module.exports = async () => {
     });
     const latest = { ...response };
     data = data.filter(d => d.title && d.url && d.source && now.diff(moment(d.created_at)) <= (4 * 60 * 60 * 1000));
-    const la
+    const latest_index = latest?.news_id && data.f
