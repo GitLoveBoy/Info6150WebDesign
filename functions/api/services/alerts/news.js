@@ -38,3 +38,5 @@ module.exports = async () => {
     const latest = { ...response };
     data = data.filter(d => d.title && d.url && d.source && now.diff(moment(d.created_at)) <= (4 * 60 * 60 * 1000));
     const latest_index = latest?.news_id && data.findIndex(d => d.id?.toString() === latest.news_id);
+    if (latest_index > -1) {
+      data 
