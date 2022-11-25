@@ -41,4 +41,6 @@ module.exports = async () => {
     if (latest_index > -1) {
       data = _.cloneDeep(_.slice(data, 0, latest_index)).reverse();
     }
-    data = _.slice(data, 0, 
+    data = _.slice(data, 0, 1);
+    const twitter = [], telegram = [];
+    d
