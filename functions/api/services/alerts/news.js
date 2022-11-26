@@ -44,4 +44,6 @@ module.exports = async () => {
     data = _.slice(data, 0, 1);
     const twitter = [], telegram = [];
     data.forEach(d => {
-      const { id, slug, kind, doma
+      const { id, slug, kind, domain, title, source } = { ...d };
+      let { url } = { ...d };
+    
