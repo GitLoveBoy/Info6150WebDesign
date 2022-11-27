@@ -47,4 +47,5 @@ module.exports = async () => {
       const { id, slug, kind, domain, title, source } = { ...d };
       let { url } = { ...d };
       url = url.replace(slug, 'click/');
-      latest.news_
+      latest.news_id = id?.toString();
+      // twitter.push(`${title}\n[via ${sourc
