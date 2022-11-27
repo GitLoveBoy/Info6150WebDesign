@@ -46,4 +46,5 @@ module.exports = async () => {
     data.forEach(d => {
       const { id, slug, kind, domain, title, source } = { ...d };
       let { url } = { ...d };
-    
+      url = url.replace(slug, 'click/');
+      latest.news_
