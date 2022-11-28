@@ -48,4 +48,5 @@ module.exports = async () => {
       let { url } = { ...d };
       url = url.replace(slug, 'click/');
       latest.news_id = id?.toString();
-      // twitter.push(`${title}\n[via ${sourc
+      // twitter.push(`${title}\n[via ${source.title}]\n\n${url}`);
+      telegram.push(`${kind === 'media' ? doma
