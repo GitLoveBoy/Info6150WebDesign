@@ -49,4 +49,5 @@ module.exports = async () => {
       url = url.replace(slug, 'click/');
       latest.news_id = id?.toString();
       // twitter.push(`${title}\n[via ${source.title}]\n\n${url}`);
-      telegram.push(`${kind === 'media' ? domain?.indexOf('youtube') > -1 ? '📺' : '🎙' : '📰'} ${title}
+      telegram.push(`${kind === 'media' ? domain?.indexOf('youtube') > -1 ? '📺' : '🎙' : '📰'} ${title}\n<pre>via</pre> <a href="${url}">${source.title}</a>`);
+    
