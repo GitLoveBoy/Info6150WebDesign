@@ -53,4 +53,6 @@ module.exports = async () => {
     });
     if (data.length > 0) {
       await crud({
-        
+        collection: 'tmp',
+        method: 'set',
+        i
