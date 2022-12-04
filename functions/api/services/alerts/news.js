@@ -58,4 +58,6 @@ module.exports = async () => {
         id,
         ...latest,
       });
-      if (twitter.length > 0
+      if (twitter.length > 0 || telegram.length > 0) {
+        alerted = true;
+ 
