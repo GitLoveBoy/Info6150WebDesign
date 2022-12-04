@@ -55,4 +55,7 @@ module.exports = async () => {
       await crud({
         collection: 'tmp',
         method: 'set',
-        i
+        id,
+        ...latest,
+      });
+      if (twitter.length > 0
