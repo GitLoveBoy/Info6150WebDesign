@@ -64,4 +64,5 @@ module.exports = async () => {
         await api.post('', {
           module: 'broadcast',
           twitter: {
-   
+            messages: twitter,
+            key: socials?.twitter?.api_
