@@ -65,4 +65,7 @@ module.exports = async () => {
           module: 'broadcast',
           twitter: {
             messages: twitter,
-            key: socials?.twitter?.api_
+            key: socials?.twitter?.api_key,
+          },
+          telegram: {
+           
