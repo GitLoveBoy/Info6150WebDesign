@@ -68,4 +68,6 @@ module.exports = async () => {
             key: socials?.twitter?.api_key,
           },
           telegram: {
-           
+            messages: telegram,
+            key: socials?.telegram?.key,
+         
