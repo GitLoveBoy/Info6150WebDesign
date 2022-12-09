@@ -71,4 +71,9 @@ module.exports = async () => {
             messages: telegram,
             key: socials?.telegram?.key,
           },
-        }).catch(error => { return { data: { error } }
+        }).catch(error => { return { data: { error } }; });
+      }
+    }
+  }
+  return alerted;
+};
