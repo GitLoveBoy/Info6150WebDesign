@@ -173,3 +173,35 @@ module.exports = async () => {
       const { tx_url, transaction_type, from_address_name, to_address_name, is_donation, is_hacked, amount, amount_usd, symbol } = { ...d };
       telegram_message += `${i === 0 ? '' : '\n\n'}`;
       telegram_message += `<a href="${tx_url}">${repeat_emoji(d)} ${transaction_type ? name(is_donation ? 'donation' : is_hacked ? 'stolen funds' : transaction_type) : 'transaction'}</a> <b>${number_format(amount, '0,0')} ${symbol.toUpperCase()}</b> <pre>${currency_symbol}${number_format(amount_usd, '0,0')}</pre>\n${transaction_type === 'mint' ? `at ${to_address_name}` : transaction_type === 'burn' ? `at ${from_address_name}` : transaction_type === 'lock' ? `at ${to_address_name}` : transaction_type === 'unlock' ? `at ${to_address_name}` : `${from_address_name.replace('Unknown ', '❔')} ➡️ ${to_address_name.replace('Unknown ', '❔')}`}`;
+    });
+    telegram.push(telegram_message);
+    data = _.orderBy(_.slice(data.filter(d => {
+      const { v, amount_usd, transaction_type, symbol, from_address_name, to_address_name, is_donation, is_hacked } = { ...d };
+      return v && amount_usd >= (transaction_type !== 'transfer' ? 4 : is_donation || is_hacked ? 0.5 : 5) * (equals_ignore_case(from_address_name, to_address_name) && huge_tokens.indexOf(symbol) > -1 ? 3 : 1) * min_amount;
+    }), 0, 3), ['timestamp'], ['asc']);
+    data.forEach((d, i) => {
+      const { tx_url, transaction_type, from_address_name, to_address_name, is_donation, is_hacked, amount, amount_usd, symbol } = { ...d };
+      twitter_message += `${i === 0 ? `Recent whale${data.length > 1 ? `s'` : `'s`} activit${data.length > 1 ? 'ies' : 'y'} you should be notified.` : ''}\n`;
+      twitter_message += `${i > 0 ? '\n' : ''}- ${repeat_emoji(d)} ${transaction_type ? name(is_donation ? 'donation' : is_hacked ? 'stolen funds' : transaction_type) : 'transaction'} ${number_format(amount, '0,0')} ${symbol.toUpperCase()} (${currency_symbol}${number_format(amount_usd, '0,0')})\n${transaction_type === 'mint' ? `at ${to_address_name}` : transaction_type === 'burn' ? `at ${from_address_name}` : transaction_type === 'lock' ? `at ${to_address_name}` : transaction_type === 'unlock' ? `at ${to_address_name}` : `${from_address_name.replace('Unknown ', '❔')} ➡️ ${to_address_name.replace('Unknown ', '❔')}`}`;
+      twitter_message += data.length < 3 ? `\n${tx_url}` : '';
+    });
+    twitter_message += data.length > 2 ? '' : `\n\n${_.uniq(data.map(d => `${d.blockchain ? `#${name(d.blockchain)}` : ''}`).concat(data.flatMap(d => [d.from_address_name?.indexOf(' ') < 0 && d.from_address_name.toLowerCase().indexOf('unknown') < 0 ? `#${name(d.from_address_name, null, ignore_case_words)}` : '', d.to_address_name?.indexOf(' ') < 0 && d.to_address_name.toLowerCase().indexOf('unknown') < 0 ? `#${name(d.to_address_name, null, ignore_case_words)}` : '']))).filter(h => h).join(' ')} #WhaleAlert`;
+    twitter.push(twitter_message);
+    if (twitter.length > 0 || telegram.length > 0) {
+      alerted = true;
+      const { socials } = { ...config };
+      await api.post('', {
+        module: 'broadcast',
+        twitter: {
+          messages: twitter,
+          key: socials?.twitter?.api_key,
+        },
+        telegram: {
+          messages: telegram,
+          key: socials?.telegram?.key,
+        },
+      }).catch(error => { return { data: { error } }; });
+    }
+  }
+  return alerted;
+};
