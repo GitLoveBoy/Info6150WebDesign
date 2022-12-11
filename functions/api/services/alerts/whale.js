@@ -123,3 +123,53 @@ module.exports = async () => {
   data = data.filter(d => {
     const { v, amount_usd, transaction_type, symbol, from_address_name, to_address_name, is_donation, is_hacked } = { ...d };
     return v && amount_usd >= (transaction_type !== 'transfer' ? 2.5 : is_donation || is_hacked ? 0.5 : 7.5) * (equals_ignore_case(from_address_name, to_address_name) && huge_tokens.indexOf(symbol) > -1 ? 2.5 : 1) * min_amount;
+  });
+  data = data.map(d => {
+    const { k } = { ...d };
+    let { blockchain } = { ...d };
+    blockchain = blockchain?.toLowerCase();
+    let tx_url;
+    switch (blockchain) {
+      case 'bitcoin':
+        tx_url = `https://www.blockchain.com/btc/tx/${k}`;
+        break;
+      case 'ethereum':
+        tx_url = `https://etherscan.io/tx/${!(k.startsWith('0x')) ? '0x' : ''}${k}`;
+        break;
+      case 'binancechain':
+        tx_url = `https://bscscan.com/tx/${!(k.startsWith('0x')) ? '0x' : ''}${k}`;
+        break;
+      case 'ripple':
+        tx_url = `https://xrpscan.com/tx/${k}`;
+        break;
+      case 'neo':
+        tx_url = `https://neoscan.io/transaction/${k}`;
+        break;
+      case 'eos':
+        tx_url = `https://eosflare.io/tx/${k}`;
+        break;
+      case 'stellar':
+        tx_url = `https://stellarchain.io/tx/${k}`;
+        break;
+      case 'tron':
+        tx_url = `https://tronscan.org/#/transaction/${k}`;
+        break;
+      case 'arbitrum':
+        tx_url = `https://arbitrum.io/tx/${!(k.startsWith('0x')) ? '0x' : ''}${k}`;
+        break;
+      default:
+        tx_url = `https://whale-alert.io/transaction/${blockchain}/${k}`;
+        break;
+    }
+    return {
+      ...d,
+      tx_url,
+    };
+  });
+  if (data.length > 0) {
+    const twitter = [], telegram = [];
+    let twitter_message = '', telegram_message = '';
+    _.orderBy(_.slice(data, 0, 5), ['timestamp'], ['asc']).forEach((d, i) => {
+      const { tx_url, transaction_type, from_address_name, to_address_name, is_donation, is_hacked, amount, amount_usd, symbol } = { ...d };
+      telegram_message += `${i === 0 ? '' : '\n\n'}`;
+      telegram_message += `<a href="${tx_url}">${repeat_emoji(d)} ${transaction_type ? name(is_donation ? 'donation' : is_hacked ? 'stolen funds' : transaction_type) : 'transaction'}</a> <b>${number_format(amount, '0,0')} ${symbol.toUpperCase()}</b> <pre>${currency_symbol}${number_format(amount_usd, '0,0')}</pre>\n${transaction_type === 'mint' ? `at ${to_address_name}` : transaction_type === 'burn' ? `at ${from_address_name}` : transaction_type === 'lock' ? `at ${to_address_name}` : transaction_type === 'unlock' ? `at ${to_address_name}` : `${from_address_name.replace('Unknown ', '❔')} ➡️ ${to_address_name.replace('Unknown ', '❔')}`}`;
