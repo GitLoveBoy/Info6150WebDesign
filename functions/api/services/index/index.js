@@ -64,3 +64,66 @@ module.exports.crud = async (params = {}) => {
         response = await indexer.get(path, { params, auth })
           .catch(error => { return { data: { error } }; });
         // set response data
+        response = response?.data?._source ? { data: { ...response.data._source, id: response.data._id } } : response;
+        break;
+      case 'set':
+      case 'update':
+        path = path || `/${collection}/_doc/${id}`;
+        if (path.includes('/_update_by_query')) {
+          try {
+            // request indexer
+            response = await indexer.post(path, params, { auth })
+              .catch(error => { return { data: { error } }; });
+          } catch (error) {}
+        }
+        else {
+          // request indexer
+          response = await (path.includes('_update') ?
+            indexer.post(path, { doc: params }, { auth }) :
+            indexer.put(path, params, { auth })
+          ).catch(error => { return { data: { error } }; });
+          // retry with update/insert
+          if (response?.data?.error) {
+            path = path?.replace(path.includes('_doc') ? '_doc' : '_update', path.includes('_doc') ? '_update' : '_doc') || path;
+            if (update_only && path?.includes('_doc')) {
+              // request indexer
+              const _response = await indexer.get(path, { auth })
+                .catch(error => { return { data: { error } }; });
+              if (_response?.data?._source) {
+                path = path?.replace('_doc', '_update') || path;
+              }
+            }
+            // request indexer
+            response = await (path.includes('_update') ?
+              indexer.post(path, { doc: params }, { auth }) :
+              indexer.put(path, params, { auth })
+            ).catch(error => { return { data: { error } }; });
+          }
+        }
+        break;
+      case 'query':
+      case 'search':
+        path = path || `/${collection}/_search`;
+        // setup search data
+        const search_data = use_raw_data ? params : {
+          query: {
+            bool: {
+              // set query for each field
+              must: Object.entries({ ...params }).filter(([k, v]) => !['from', 'size', 'query', 'aggs', 'sort', '_source', 'fields'].includes(k)).map(([k, v]) => {
+                // overide field from params
+                switch (k) {
+                  case 'id':
+                    if (!v && id) {
+                      v = id;
+                    }
+                    break;
+                  default:
+                    break;
+                }
+                // set match query
+                return {
+                  match: {
+                    [`${k}`]: v,
+                  },
+                };
+              }),
