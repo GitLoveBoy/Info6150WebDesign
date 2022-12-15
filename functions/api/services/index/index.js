@@ -127,3 +127,41 @@ module.exports.crud = async (params = {}) => {
                   },
                 };
               }),
+            },
+          },
+        };
+        if (path.endsWith('/_search')) {
+          // set results size
+          search_data.size = !isNaN(params?.size) ? Number(params.size) : 10;
+          // set sort fields
+          search_data.sort = params?.sort;
+          // set track total
+          search_data.track_total_hits = track_total_hits;
+        }
+        // request indexer
+        response = await indexer.post(path, search_data, { auth })
+          .catch(error => { return { data: { error } }; });
+        // set response data
+        response = response?.data?.hits?.hits || response?.data?.aggregations ? { data: { data: response.data.hits?.hits?.map(d => { return { ...d?._source, ...d?.fields, id: d?._id } }), total: response.data.hits?.total?.value, aggs: response.data.aggregations } } : response;
+        break;
+      case 'delete':
+      case 'remove':
+        path = path || `/${collection}/_doc/${id}`;
+        // request indexer
+        response = await indexer.delete(path, { params, auth })
+          .catch(error => { return { data: { error } }; });
+        break;
+      default:
+        break;
+    }
+
+    // set response
+    if (response?.data) {
+      delete response.data.error;
+      response = response.data;
+    }
+  }
+
+  // return response
+  return response;
+};
