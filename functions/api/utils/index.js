@@ -5,4 +5,5 @@ const remove_decimal = number => {
   if (typeof number === 'number') {
     number = number.toString();
   }
-  if 
+  if (number.includes('NaN')) {
+    return number.replac
