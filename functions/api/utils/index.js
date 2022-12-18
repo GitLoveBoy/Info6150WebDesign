@@ -2,4 +2,7 @@
 const numeral = require('numeral');
 
 const remove_decimal = number => {
-  if (typeof number === 'nu
+  if (typeof number === 'number') {
+    number = number.toString();
+  }
+  if 
