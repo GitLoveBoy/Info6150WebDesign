@@ -6,4 +6,7 @@ const remove_decimal = number => {
     number = number.toString();
   }
   if (number.includes('NaN')) {
-    return number.replac
+    return number.replace('NaN', '<0.00000001');
+  }
+  if (typeof number === 'string') {
+    if 
