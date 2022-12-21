@@ -9,4 +9,5 @@ const remove_decimal = number => {
     return number.replace('NaN', '<0.00000001');
   }
   if (typeof number === 'string') {
-    if 
+    if (number.indexOf('.') > -1) {
+      let decimal = number.sub
