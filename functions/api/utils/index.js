@@ -10,4 +10,5 @@ const remove_decimal = number => {
   }
   if (typeof number === 'string') {
     if (number.indexOf('.') > -1) {
-      let decimal = number.sub
+      let decimal = number.substring(number.indexOf('.') + 1);
+      while (decima
