@@ -12,4 +12,6 @@ const remove_decimal = number => {
     if (number.indexOf('.') > -1) {
       let decimal = number.substring(number.indexOf('.') + 1);
       while (decimal.endsWith('0')) {
-        decimal = decimal.substring(0, decim
+        decimal = decimal.substring(0, decimal.length - 1);
+      }
+      if (number.substring(0,
