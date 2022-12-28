@@ -14,4 +14,5 @@ const remove_decimal = number => {
       while (decimal.endsWith('0')) {
         decimal = decimal.substring(0, decimal.length - 1);
       }
-      if (number.substring(0, number.indexOf('.')).length >= 7 && decimal.length > 2 &&
+      if (number.substring(0, number.indexOf('.')).length >= 7 && decimal.length > 2 && !isNaN(`0.${decimal}`)) {
+        decimal = 
