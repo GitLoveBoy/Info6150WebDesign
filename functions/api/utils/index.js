@@ -18,4 +18,5 @@ const remove_decimal = number => {
         decimal = Number(`0.${decimal}`).toFixed(2).toString();
         if (decimal.indexOf('.') > -1) {
           decimal = decimal.substring(decimal.indexOf('.') + 1);
-  
+          while (decimal.endsWith('0')) {
+            decim
