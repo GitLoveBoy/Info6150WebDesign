@@ -21,4 +21,6 @@ const remove_decimal = number => {
           while (decimal.endsWith('0')) {
             decimal = decimal.substring(0, decimal.length - 1);
           }
-    
+        }
+      }
+      return `${number.substring(0, 
