@@ -23,4 +23,5 @@ const remove_decimal = number => {
           }
         }
       }
-      return `${number.substring(0, 
+      return `${number.substring(0, number.indexOf('.'))}${decimal ? '.' : ''}${decimal}`;
+    }
