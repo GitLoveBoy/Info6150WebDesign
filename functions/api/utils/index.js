@@ -29,3 +29,5 @@ const remove_decimal = number => {
   }
   return '';
 }
+const number_format = (number, format, is_exact) => {
+  l
