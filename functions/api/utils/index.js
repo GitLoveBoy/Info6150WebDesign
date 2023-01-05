@@ -30,4 +30,4 @@ const remove_decimal = number => {
   return '';
 }
 const number_format = (number, format, is_exact) => {
-  l
+  let string = remove_decimal(numeral(number).format(f
