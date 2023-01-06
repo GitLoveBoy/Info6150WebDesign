@@ -30,4 +30,4 @@ const remove_decimal = number => {
   return '';
 }
 const number_format = (number, format, is_exact) => {
-  let string = remove_decimal(numeral(number).format(f
+  let string = remove_decimal(numeral(number).format(format.includes('.000') && Math.abs(Number(number)) >= 1.01 
