@@ -30,4 +30,5 @@ const remove_decimal = number => {
   return '';
 }
 const number_format = (number, format, is_exact) => {
-  let string = remove_decimal(numeral(number).format(format.includes('.000') && Math.abs(Number(number)) >= 1.01 ? `${format.substring(0, format.indexOf('.') + (is_exact ? 7 : 3))}` : format === '0,0' && Number(number) < 1 ? '0
+  let string = remove_decimal(numeral(number).format(format.includes('.000') && Math.abs(Number(number)) >= 1.01 ? `${format.substring(0, format.indexOf('.') + (is_exact ? 7 : 3))}` : format === '0,0' && Number(number) < 1 ? '0,0.00' : format));
+  if (string?.toLowerCase().endsWith('t') &
