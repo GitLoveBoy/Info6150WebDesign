@@ -37,4 +37,4 @@ const number_format = (number, format, is_exact) => {
   return string;
 }
 
-const equal
+const equals_ignore_case = (a, b) => (!a && !b) || a?.toLow
