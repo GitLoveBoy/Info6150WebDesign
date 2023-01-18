@@ -37,4 +37,7 @@ const number_format = (number, format, is_exact) => {
   return string;
 }
 
-const equals_ignore_case = (a, b) => (!a && !b) || a?.toLow
+const equals_ignore_case = (a, b) => (!a && !b) || a?.toLowerCase() === b?.toLowerCase();
+
+const names = {
+  btc: 'Bit
