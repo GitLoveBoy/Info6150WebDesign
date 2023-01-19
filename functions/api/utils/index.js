@@ -40,4 +40,7 @@ const number_format = (number, format, is_exact) => {
 const equals_ignore_case = (a, b) => (!a && !b) || a?.toLowerCase() === b?.toLowerCase();
 
 const names = {
-  btc: 'Bit
+  btc: 'Bitcoin',
+  eth: 'Ethereum',
+};
+const capitalize = s => type
