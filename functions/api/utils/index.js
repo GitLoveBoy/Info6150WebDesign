@@ -43,4 +43,4 @@ const names = {
   btc: 'Bitcoin',
   eth: 'Ethereum',
 };
-const capitalize = s => typeof s !== 'string' ? '' : s.trim().split(' ').join('_').split('-').
+const capitalize = s => typeof s !== 'string' ? '' : s.trim().split(' ').join('_').split('-').join('_').split('_').map(x => x.trim()).filter(x => x).
