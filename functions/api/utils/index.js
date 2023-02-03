@@ -44,4 +44,4 @@ const names = {
   eth: 'Ethereum',
 };
 const capitalize = s => typeof s !== 'string' ? '' : s.trim().split(' ').join('_').split('-').join('_').split('_').map(x => x.trim()).filter(x => x).map(x => `${x.substr(0, 1).toUpperCase()}${x.substr(1)}`).join(' ');
-const name = (s, data, ignore_case_words = []) => names
+const name = (s, data, ignore_case_words = []) => names[s] ? names[s] : data?.name && data.id === s ? data.nam
