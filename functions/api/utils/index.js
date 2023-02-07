@@ -50,3 +50,6 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const get_params = req => {
   // initial params
+  const params = {
+    ...req.query,
+    ...req.
