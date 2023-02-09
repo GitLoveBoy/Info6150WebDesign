@@ -52,4 +52,10 @@ const get_params = req => {
   // initial params
   const params = {
     ...req.query,
-    ...req.
+    ...req.body,
+  };
+  return params;
+};
+
+const to_json = s => {
+  i
