@@ -58,4 +58,5 @@ const get_params = req => {
 };
 
 const to_json = s => {
-  i
+  if (s) {
+    if (typeof s === 'object') return s;
