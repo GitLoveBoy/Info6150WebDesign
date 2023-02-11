@@ -62,4 +62,10 @@ const to_json = s => {
     if (typeof s === 'object') return s;
     try {
       return JSON.parse(s);
-    } catc
+    } catch (error) {}
+  }
+  return null;
+};
+
+module.exports = {
+  number_
