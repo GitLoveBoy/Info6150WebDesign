@@ -60,3 +60,6 @@ const get_params = req => {
 const to_json = s => {
   if (s) {
     if (typeof s === 'object') return s;
+    try {
+      return JSON.parse(s);
+    } catc
