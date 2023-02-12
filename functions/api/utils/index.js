@@ -68,4 +68,9 @@ const to_json = s => {
 };
 
 module.exports = {
-  number_
+  number_format,
+  name,
+  sleep,
+  equals_ignore_case,
+  get_params,
+ 
