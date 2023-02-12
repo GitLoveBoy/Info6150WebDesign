@@ -73,4 +73,5 @@ module.exports = {
   sleep,
   equals_ignore_case,
   get_params,
- 
+  to_json,
+};
