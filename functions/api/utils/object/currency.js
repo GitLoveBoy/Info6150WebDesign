@@ -1,3 +1,4 @@
 module.exports = {
   currency: 'usd',
-  cu
+  currency_symbol: '$',
+};
