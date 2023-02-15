@@ -80,3 +80,48 @@ resource "aws_opensearch_domain" "domain" {
     }
   }
 }
+
+resource "aws_opensearch_domain_policy" "main" {
+  domain_name = aws_opensearch_domain.domain.domain_name
+  access_policies = <<POLICIES
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": ["es:*"],
+            "Principal": {
+                "AWS" : ["*"]
+            },
+            "Effect": "Allow",
+            "Resource": "${aws_opensearch_domain.domain.arn}/*"
+        }
+    ]
+}
+POLICIES
+}
+
+resource "aws_lambda_function" "function" {
+  function_name    = "${var.package_name}"
+  filename         = data.archive_file.zip.output_path
+  source_code_hash = data.archive_file.zip.output_base64sha256
+  role             = aws_iam_role.role.arn
+  handler          = "index.handler"
+  runtime          = "nodejs14.x"
+  timeout          = 120
+  memory_size      = 512
+  environment {
+    variables = {
+      NODE_NO_WARNINGS           = 1
+      INDEXER_URL                = "https://${aws_opensearch_domain.domain.endpoint}"
+      INDEXER_USERNAME           = var.indexer_username
+      INDEXER_PASSWORD           = var.indexer_password
+    }
+  }
+  kms_key_arn      = ""
+}
+
+resource "aws_apigatewayv2_api" "api" {
+  name          = "${var.package_name}-api"
+  protocol_type = "HTTP"
+  cors_configuration {
+    allow_origins = ["*"]
