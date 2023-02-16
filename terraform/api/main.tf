@@ -125,3 +125,26 @@ resource "aws_apigatewayv2_api" "api" {
   protocol_type = "HTTP"
   cors_configuration {
     allow_origins = ["*"]
+    allow_headers = ["*"]
+    allow_methods = ["*"]
+  }
+  route_key     = "ANY /${aws_lambda_function.function.function_name}"
+  target        = aws_lambda_function.function.arn
+}
+
+resource "aws_apigatewayv2_route" "route" {
+  api_id    = aws_apigatewayv2_api.api.id
+  route_key = "ANY /"
+  target    = "integrations/${var.api_gateway_integration_id}"
+}
+
+resource "aws_cloudwatch_event_rule" "schedule" {
+  name                = "${var.package_name}-rule"
+  schedule_expression = "cron(*/1 * * * ? *)"
+}
+
+resource "aws_cloudwatch_event_target" "target" {
+  rule      = aws_cloudwatch_event_rule.schedule.name
+  target_id = aws_lambda_function.function.id
+  arn       = aws_lambda_function.function.arn
+}
