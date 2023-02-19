@@ -6,4 +6,8 @@ output "opensearch" {
   value = aws_opensearch_domain.domain.endpoint
 }
 
-output "api_gateway"
+output "api_gateway" {
+  value = aws_apigatewayv2_api.api.api_endpoint
+}
+
+ou
