@@ -3,4 +3,7 @@ output "lambda" {
 }
 
 output "opensearch" {
-  value =
+  value = aws_opensearch_domain.domain.endpoint
+}
+
+output "api_gateway"
