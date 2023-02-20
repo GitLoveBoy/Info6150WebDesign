@@ -11,4 +11,5 @@ output "api_gateway" {
 }
 
 output "event_rule" {
-  value = aws_cloudwatch_event_rule.sche
+  value = aws_cloudwatch_event_rule.schedule.arn
+}
