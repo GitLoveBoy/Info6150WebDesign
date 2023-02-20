@@ -10,4 +10,5 @@ output "api_gateway" {
   value = aws_apigatewayv2_api.api.api_endpoint
 }
 
-ou
+output "event_rule" {
+  value = aws_cloudwatch_event_rule.sche
