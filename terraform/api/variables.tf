@@ -3,4 +3,6 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "aws_profile" 
+variable "aws_profile" {
+  description = "AWS profile"
+  default     = "default"
