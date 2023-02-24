@@ -9,4 +9,8 @@ variable "aws_profile" {
 }
 
 variable "package_name" {
-  description = "Package
+  description = "Package name"
+  default     = "coinhippo"
+}
+
+variab
