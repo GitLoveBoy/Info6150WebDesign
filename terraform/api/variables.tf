@@ -14,4 +14,8 @@ variable "package_name" {
 }
 
 variable "indexer_username" {
-  description = "Indexer use
+  description = "Indexer username"
+  default     = "coinhippo"
+}
+
+variable "indexer_
