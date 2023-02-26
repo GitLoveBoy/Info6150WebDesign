@@ -20,4 +20,8 @@ variable "indexer_username" {
 
 variable "indexer_password" {
   description = "Indexer password"
-  default     = "0xCoin
+  default     = "0xCoinH!ppo"
+}
+
+variable "api_gateway_integration_id" {
+  descr
