@@ -18,4 +18,6 @@ variable "indexer_username" {
   default     = "coinhippo"
 }
 
-variable "indexer_
+variable "indexer_password" {
+  description = "Indexer password"
+  default     = "0xCoin
