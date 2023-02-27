@@ -24,4 +24,6 @@ variable "indexer_password" {
 }
 
 variable "api_gateway_integration_id" {
-  descr
+  description = "API gateway integration id"
+  default     = "6o4o9kv"
+}
